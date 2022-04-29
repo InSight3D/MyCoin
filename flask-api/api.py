@@ -190,3 +190,5 @@ def usdvalue():
             return jsonify({'message': 'User not found'})
     else:
         return jsonify({'message': 'Please use POST method'})    
+
+# test

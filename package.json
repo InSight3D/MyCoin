@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "start-api": "cd pages && cd api  && venv/bin/flask run --no-debugger",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -16,5 +17,6 @@
   "devDependencies": {
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }

@@ -10,13 +10,13 @@ export default function Home() {
    function getData() {
      axios({
        method: "GET",
-       url:"http://localhost:5000/profile",
+       url:"http://localhost:5000/time",
      })
      .then((response) => {
        const res =response.data
        setProfileData(({
-         profile_name: res.name,
-         about_me: res.about}))
+         profile_name: res.time,
+         about_me: res.time}))
      }).catch((error) => {
        if (error.response) {
          console.log(error.response)

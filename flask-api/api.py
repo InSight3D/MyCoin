@@ -12,6 +12,7 @@ app.config['MYSQL_DB'] = 'sql5488931'
 
 mysql = MySQL(app)
 cg = CoinGeckoAPI()
+CORS(app)
 
 @app.route('/time')
 def get_current_time():

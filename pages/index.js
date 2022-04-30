@@ -1,62 +1,64 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from "axios";
 
 
 
 export default function Home() {
-   // new line start
-   const [profileData, setProfileData] = useState(null)
+  // new line start
+  const [currentTime, setCurrentTime] = useState(0)
 
-   function getData() {
-     axios({
-       method: "GET",
-       url:"http://localhost:5000/time",
-     })
-     .then((response) => {
-       const res =response.data
-       setProfileData(({
-         profile_name: res.time,
-         about_me: res.time}))
-     }).catch((error) => {
-       if (error.response) {
-         console.log(error.response)
-         console.log(error.response.status)
-         console.log(error.response.headers)
-         }
-     })}
 
-    
 
-  
+
+  useEffect(() => {
+    function getData() {
+      axios({
+        method: "GET",
+        url: "http://localhost:5000/time",
+      })
+        .then((response) => {
+          const res = response.data
+          var myDate = new Date(res.time*1000);
+          console.log(res.time)
+          setCurrentTime(({
+            current_time: myDate.toLocaleString()
+          }))
+        }).catch((error) => {
+          if (error.response) {
+            console.log(error.response)
+            console.log(error.response.status)
+            console.log(error.response.headers)
+          }
+        })
+    }
+
+    getData();
+
+  }, [])
+
+
+
+
+
 
   return (
     <div className="App">
-    <header className="App-header">
-    
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+      <header className="App-header">
 
-      {/* new line start*/}
-      <p>To get your profile details: </p><button onClick={getData}>Click me</button>
-      {profileData && <div>
-            <p>Profile name: {profileData.profile_name}</p>
-            <p>About me: {profileData.about_me}</p>
+        {/* new line start*/}
+
+        <div className="flex justify-center items-center h-screen bg-gray-700">
+          <div className='text-green-300'>
+            <p className='flex justify-center text-xl font-bold'>Current Time</p>
+            <p className='text-xl font-bold'> {currentTime.current_time}</p>
           </div>
-      }
-       {/* end of new line */}
-    </header>
-  </div>
-);
- 
-    }
+        </div>
+
+        {/* end of new line */}
+      </header>
+    </div>
+  );
+
+}
 
 

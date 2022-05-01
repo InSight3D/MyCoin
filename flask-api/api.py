@@ -1,3 +1,4 @@
+from lib2to3.pgen2 import token
 import time
 from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
@@ -13,6 +14,15 @@ app.config['MYSQL_DB'] = 'sql5488931'
 mysql = MySQL(app)
 cg = CoinGeckoAPI()
 CORS(app)
+
+@app.route('/test', methods=['GET', 'POST'])
+def test():
+    if request.method == 'POST':
+        data = request.form['name']
+        print(data)
+        return jsonify(data)
+    else:
+        return jsonify({'message': 'Hello World!'})
 
 @app.route('/time')
 def get_current_time():
@@ -192,4 +202,29 @@ def usdvalue():
     else:
         return jsonify({'message': 'Please use POST method'})    
 
+@app.route('/tradingview/widget', methods=['POST', 'GET'])
+def tradingview_widget():
+    if request.method == 'POST':
+        token = request.form['token']
+    
+        data = {
+            "autosize": True,
+            "symbol": "COINBASE:{token}".format(token=token),
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": False,
+            "hide_legend": True,
+            "show_popup_button": True,
+            "popup_width": "1000",
+            "popup_height": "650",
+            "container_id": "tradingview_ce061"
+        }
+        return jsonify(data)
+    else:
+        return jsonify({'message': 'Please use POST method'})
+        
 # test

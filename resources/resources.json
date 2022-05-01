@@ -1,0 +1,14 @@
+{
+  {
+    "name": "Landscape Banner",
+    "Location": "/resources/landscape-banner.jpeg"
+  },
+  {
+    "Name": "Vertical Banner",
+    "Location": "/resources/vertical-banner.jpeg"
+  },
+  {
+    "Name": "Logo",
+    "Location": "/resources/logo.png"
+  },
+}

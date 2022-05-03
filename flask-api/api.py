@@ -4,12 +4,13 @@ from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
 from pycoingecko import CoinGeckoAPI
 from flask_cors import CORS
+import os 
 
 app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'sql5.freemysqlhosting.net'
-app.config['MYSQL_USER'] = 'sql5488931'
-app.config['MYSQL_PASSWORD'] = '5YUVQYnWlq'
-app.config['MYSQL_DB'] = 'sql5488931'
+app.config['MYSQL_HOST'] = os.environ['MYSQL_HOST']
+app.config['MYSQL_USER'] = os.environ['MYSQL_USER']
+app.config['MYSQL_PASSWORD'] = os.environ['MYSQL_PASSWORD']
+app.config['MYSQL_DB'] = os.environ['MYSQL_DB']
 
 mysql = MySQL(app)
 cg = CoinGeckoAPI()

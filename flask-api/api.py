@@ -5,12 +5,14 @@ from flask_mysqldb import MySQL
 from pycoingecko import CoinGeckoAPI
 from flask_cors import CORS
 import os 
+from sql_helpers import *
 
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = os.environ['MYSQL_HOST']
 app.config['MYSQL_USER'] = os.environ['MYSQL_USER']
 app.config['MYSQL_PASSWORD'] = os.environ['MYSQL_PASSWORD']
 app.config['MYSQL_DB'] = os.environ['MYSQL_DB']
+app.config['MYSQL_PORT'] = 3306
 
 mysql = MySQL(app)
 cg = CoinGeckoAPI()
@@ -31,8 +33,9 @@ def get_current_time():
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
+    table = Table('users', "email", "password", "first_name", "last_name", "account_value")
     if request.method == 'POST':
-        cur = mysql.connection.cursor()
+        
 
         email = request.form['email']
         password = request.form['password']
@@ -40,45 +43,50 @@ def register():
         last_name = request.form['last_name']
         account_value = 100000
 
-        cur.execute("INSERT INTO users (email, password, first_name, last_name, account_value) VALUES (%s, %s, %s, %s, %s)", (email, password, first_name, last_name, account_value))
-
-        mysql.connection.commit()
-        cur.close()
-        return jsonify({'message': 'User created successfully'})
+        if isnewuser(email):
+            table.insert(email, password, first_name, last_name, account_value)
+            return jsonify({'message': 'User created successfully'})
+        else:
+            return jsonify({'message': 'User already exists'})
     else:
         return jsonify({'message': 'Please use POST method'})
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
+    users = Table('users', "email", "password", "first_name", "last_name", "account_value")
     if request.method == 'POST':
-        cur = mysql.connection.cursor()
+        
 
         email = request.form['email']
         password = request.form['password']
 
-        cur.execute("SELECT * FROM users WHERE email = %s AND password = %s", (email, password))
-        user = cur.fetchone()
-        if user:
-            return jsonify({'message': 'User logged in successfully'})
+        user = users.getone('email', email)
+        accPass = user.get('password')
+
+        if accPass is None:
+            return jsonify({'message': 'User does not exist'})
         else:
-            return jsonify({'message': 'User not found'})
+            if accPass == password:
+                return jsonify({'message': 'Login successful'})
+            else:
+                return jsonify({'message': 'Incorrect password'})
     else:
         return jsonify({'message': 'Please use POST method'})
 
 @app.route('/buytoken', methods=['POST', 'GET'])
 def buy():
     if request.method == 'POST':
-        cur = mysql.connection.cursor()
 
         token = request.form['token']
         ammount = request.form['ammount']
         email = request.form['email']
 
         # get the usd ammount of the user
-        cur.execute("SELECT * FROM users WHERE email = %s", (email,))
-        user = cur.fetchone()
+        users = Table('users', "email", "password", "first_name", "last_name", "account_value")
+        user = users.getone('email', email)
+        accValue = user.get('account_value')
         if user:
-            account_value = user['account_value']
+            account_value = accValue
             # get the price of the token
             price = cg.get_price(ids=token, vs_currencies='usd')
             token_price = price['usd']
@@ -89,26 +97,24 @@ def buy():
             # check if the user has enough money
             if account_value >= transaction_value:
                 # check if the token is already in the database
-                cur.execute("SELECT * FROM tokens WHERE token = %s", (token,))
-                token_in_db = cur.fetchone()
+                tokens = Table('cryptos', "email", "token", "token_ammount", "transaction_price")
+                token_in_db = tokens.getone('token', token)
                 if token_in_db:
                     # updaate the user account value
                     account_value = account_value - transaction_value
-                    cur.execute("UPDATE users SET account_value = %s WHERE email = %s", (account_value, email))
+                    users.update('account_value', account_value, 'email', email)
                     # update the token ammount
                     ammount = ammount + token_in_db['ammount']
-                    cur.execute("UPDATE tokens SET ammount = %s WHERE token = %s", (ammount, token))
-                    mysql.connection.commit()
-                    cur.close()
+                    tokens.update('ammount', ammount, 'token', token)
+                    # return transaction success
                     return jsonify({'message': 'Transaction successful'})
                 else:
                     # update the user account value
                     account_value = account_value - transaction_value
-                    cur.execute("UPDATE users SET account_value = %s WHERE email = %s", (account_value, email))
+                    users.update('account_value', account_value, 'email', email)
                     # insert data into crypto table
-                    cur.execute("INSERT INTO crypto (email, token, token_ammount, transaction_price	) VALUES (%s, %s, %s, %s)", (email, token, ammount, transaction_value))
-                    mysql.connection.commit()
-                    cur.close()
+                    tokens.insert(email, token, ammount, token_price)
+                    # return transaction success
                     return jsonify({'message': 'Transaction successful'})
             else:
                 return jsonify({'message': 'Not enough money'})
@@ -119,15 +125,17 @@ def buy():
 @app.route('/selltoken', methods=['POST', 'GET'])
 def sell():
     if request.method == 'POST':
-        cur = mysql.connection.cursor()
 
         token = request.form['token']
         ammount = request.form['ammount']
         email = request.form['email']
 
         # get all user holdings from crypto table
-        cur.execute("SELECT * FROM crypto WHERE email = %s", (email,))
-        user = cur.fetchall()
+        users = Table('users', "email", "password", "first_name", "last_name", "account_value")
+        tokens = Table('cryptos', "email", "token", "token_ammount", "transaction_price")
+
+        user = users.getone('email', email)
+        account_value = user.get('account_value')
         if user:
             for row in user:
                 if row['token'] == token:
@@ -137,12 +145,10 @@ def sell():
                     # calculate the transaction value
                     transaction_value = token_price * ammount
                     # update the user account value
-                    account_value = user['account_value'] + transaction_value
-                    cur.execute("UPDATE users SET account_value = %s WHERE email = %s", (account_value, email))
-                    # delete the user holding
-                    cur.execute("DELETE FROM crypto WHERE email = %s AND token = %s", (email, token))
-                    mysql.connection.commit()
-                    cur.close()
+                    account_value = account_value + transaction_value
+                    users.update('account_value', account_value, 'email', email)
+                    # delete the token from the database where the email is the same as the user
+                    tokens.delete('email', email, 'token', token)
                     return jsonify({'message': 'Transaction successful'})
             return jsonify({'message': 'Token not found'})
         else:
@@ -154,15 +160,19 @@ def sell():
 @app.route('/tokens', methods=['POST', 'GET'])
 def tokens():
     if request.method == 'POST':
-        cur = mysql.connection.cursor()
 
         email = request.form['email']
 
         # get all user holdings from crypto table
-        cur.execute("SELECT * FROM crypto WHERE email = %s", (email,))
-        user = cur.fetchall()
+        tokens = Table('cryptos', "email", "token", "token_ammount", "transaction_price")
+        user = tokens.getall('email', email)
+
+        tokens_list = []
+        for row in user:
+            tokens_list.append({'token': row['token'], 'ammount': row['token_ammount']})
+            
         if user:
-            return jsonify({'tokens': user})
+            return jsonify({'tokens': tokens_list})
         else:
             return jsonify({'message': 'User not found'})
     else:
@@ -172,32 +182,25 @@ def tokens():
 @app.route('/usdvalue', methods=['POST', 'GET'])
 def usdvalue():
     if request.method == 'POST':
-        cur = mysql.connection.cursor()
 
         email = request.form['email']
 
         # get all user holdings from crypto table
-        cur.execute("SELECT * FROM crypto WHERE email = %s", (email,))
-        
-        user = cur.fetchall()
+        tokens = Table('cryptos', "email", "token", "token_ammount", "transaction_price")
+        user = tokens.getall('email', email)
 
         usd_account_value = 0
-
+        tokens_list = []
+        # get all the tokens of the user and append to tokens_list
+        for row in user:
+            tokens_list.append({'token': row['token'], 'ammount': row['token_ammount']})
         if user:
-            for row in user:
-                # get the price of the token
+            # get the value of the tokens in usd and add to usd_account_value
+            for row in tokens_list:
                 price = cg.get_price(ids=row['token'], vs_currencies='usd')
-                token_price = price['usd']
-                # calculate the transaction value
-                transaction_value = token_price * row['token_ammount']
-                usd_account_value = usd_account_value + transaction_value
-
-                mysql.connection.commit()
-                cur.close()
-
-                return jsonify({'usd_account_value': usd_account_value})
-
+                usd_account_value = usd_account_value + (row['ammount'] * price['usd'])
                 
+                return jsonify({'usd_account_value': usd_account_value})
         else:
             return jsonify({'message': 'User not found'})
     else:

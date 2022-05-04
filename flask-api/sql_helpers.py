@@ -1,5 +1,5 @@
 
-from app import mysql
+from api import mysql
 from email import message
 import smtplib, ssl
 import email
@@ -80,13 +80,13 @@ def isnewtable(tableName):
         return False
 
 #check if user already exists
-def isnewuser(username):
+def isnewuser(email):
     #access the users table and get all values from column "username"
     users = Table("users", "name", "email", "username", "password")
     data = users.getall()
-    usernames = [user.get('username') for user in data]
+    emails = [user.get('email') for user in data]
 
-    return False if username in usernames else True
+    return False if email in emails else True
 # make a send email function that sends an email to a user
 
 def isnewtutor(email):
@@ -116,14 +116,3 @@ def send_email(email, subject, body):
 
 
 
-# make a reuqest a tutor function that sends a email to all tutors who teach the subject
-def requestTutor(grade, subject, description, email):
-    #access the users table and get all values from column "username"
-    tutors = Table("tutors", "name", "email", "subject", "grade")
-
-    data = tutors.getall()
-    tutors = [tutor.get('email') for tutor in data]
-
-    #send email to all tutors who teach the subject
-    for tutor in tutors:
-        send_email(tutor, f"You have a new request!", "You have a new request for a tutor!\n\nGrade: %s\nSubject: %s\nDescription: %s\nStudent Email: %s" %(grade, subject, description, email))

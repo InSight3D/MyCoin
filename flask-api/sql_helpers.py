@@ -1,5 +1,5 @@
 
-from app import mysql, session
+from app import mysql
 from email import message
 import smtplib, ssl
 import email

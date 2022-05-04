@@ -1,20 +1,30 @@
-from lib2to3.pgen2 import token
 import time
 from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
 from pycoingecko import CoinGeckoAPI
 from flask_cors import CORS
 import os 
-from sql_helpers import *
+
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
+# app secret key
+app.secret_key = "secret"
 app.config['MYSQL_HOST'] = os.environ['MYSQL_HOST']
 app.config['MYSQL_USER'] = os.environ['MYSQL_USER']
 app.config['MYSQL_PASSWORD'] = os.environ['MYSQL_PASSWORD']
 app.config['MYSQL_DB'] = os.environ['MYSQL_DB']
 app.config['MYSQL_PORT'] = 3306
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
+
+
+
+
 
 mysql = MySQL(app)
+from sql_helpers import *
 cg = CoinGeckoAPI()
 CORS(app)
 
@@ -26,6 +36,12 @@ def test():
         return jsonify(data)
     else:
         return jsonify({'message': 'Hello World!'})
+
+@app.route('/mysql_test', methods=['GET', 'POST'])
+def mysql_test():
+    cur = mysql.connection.cursor()
+    cur.close()
+    return jsonify({'message': 'Works!'})
 
 @app.route('/time')
 def get_current_time():
@@ -41,7 +57,7 @@ def register():
         password = request.form['password']
         first_name = request.form['first_name']
         last_name = request.form['last_name']
-        account_value = 100000
+        account_value = 10000
 
         if isnewuser(email):
             table.insert(email, password, first_name, last_name, account_value)

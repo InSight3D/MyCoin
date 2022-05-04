@@ -7,8 +7,7 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
-
+print(mysql)
 class Table():
 
     def __init__(self, table_name, *args):
@@ -21,8 +20,8 @@ class Table():
             create_data = ""
             for column in self.columnsList:
                 create_data += "%s varchar(100)," %column
-
-            cur = mysql.connection.cursor() #create the table
+            
+            cur = mysql.connection.cursor()
             cur.execute("CREATE TABLE %s(%s)" %(self.table, create_data[:len(create_data)-1]))
             cur.close()
 

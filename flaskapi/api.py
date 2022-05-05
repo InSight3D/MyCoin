@@ -19,7 +19,8 @@ app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 mysql = MySQL(app)
 cg = CoinGeckoAPI()
-from functions import *
+from helpers import *
+mycoin_helper = MyCoinHelper(cg)
 CORS(app)
 
 @app.route('/test', methods=['GET', 'POST'])
@@ -247,7 +248,17 @@ def price():
     if request.method == 'POST':
         token = request.form['token']
         price = cg.get_price(ids=token, vs_currencies='usd')
-        return jsonify({'price': price['usd']})
+        return jsonify({'price': price})
     else:
         return jsonify({'message': 'Please use POST method'})
-# test
+
+# get token description from ticker and return in json format
+@app.route('/token/description', methods=['POST', 'GET'])
+def description():
+    if request.method == 'POST':
+        token = request.form['token']
+
+        description = mycoin_helper.get_description(token)
+        return jsonify({'description': description})
+    else:
+        return jsonify({'message': 'Please use POST method'})

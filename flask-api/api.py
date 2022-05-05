@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-# app secret key
 app.secret_key = "secret"
 app.config['MYSQL_HOST'] = os.environ['MYSQL_HOST']
 app.config['MYSQL_USER'] = os.environ['MYSQL_USER']
@@ -18,14 +17,9 @@ app.config['MYSQL_DB'] = os.environ['MYSQL_DB']
 app.config['MYSQL_PORT'] = 3306
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
-
-
-
-
-
 mysql = MySQL(app)
-from sql_helpers import *
 cg = CoinGeckoAPI()
+from functions import *
 CORS(app)
 
 @app.route('/test', methods=['GET', 'POST'])
@@ -246,5 +240,14 @@ def tradingview_widget():
         return jsonify(data)
     else:
         return jsonify({'message': 'Please use POST method'})
-        
+
+# Get Crypto price from ticker and return in json format
+@app.route('/token/price', methods=['POST', 'GET'])
+def price():
+    if request.method == 'POST':
+        token = request.form['token']
+        price = cg.get_price(ids=token, vs_currencies='usd')
+        return jsonify({'price': price['usd']})
+    else:
+        return jsonify({'message': 'Please use POST method'})
 # test

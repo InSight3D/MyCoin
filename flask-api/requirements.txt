@@ -1,0 +1,5 @@
+flask
+flask_mysqldb
+pycoingecko
+flask_cors
+dotenv

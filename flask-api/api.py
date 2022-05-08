@@ -67,7 +67,6 @@ def login():
     users = Table('users', "email", "password", "first_name", "last_name", "account_value")
     if request.method == 'POST':
         
-
         email = request.form['email']
         password = request.form['password']
 

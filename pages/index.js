@@ -7,7 +7,7 @@ import Footer from '../components/footer';
 
 
 export default function Home() {
-  // new line start
+  
 
 
 
@@ -18,10 +18,12 @@ export default function Home() {
         <meta property="og:title" content="My Coin" key="title" />
       </Head>
 
-      <div className='absoulte'>
-        <Navigation/>
-        {/* <Footer /> */}
-      </div>
+  
+       <div className='pb-2'></div>
+
+
+   
+
     </>
   );
 

@@ -16,12 +16,14 @@ app.config['MYSQL_PASSWORD'] = os.environ['MYSQL_PASSWORD']
 app.config['MYSQL_DB'] = os.environ['MYSQL_DB']
 app.config['MYSQL_PORT'] = 3306
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 
 mysql = MySQL(app)
 cg = CoinGeckoAPI()
 from helpers import *
 mycoin_helper = MyCoinHelper(cg)
-CORS(app)
+CORS(app, support_credentials=True)
 
 @app.route('/test', methods=['GET', 'POST'])
 def test():
@@ -63,6 +65,7 @@ def register():
         return jsonify({'message': 'Please use POST method'})
 
 @app.route('/login', methods=['POST', 'GET'])
+@cross_origin()
 def login():
     users = Table('users', "email", "password", "first_name", "last_name", "account_value")
     if request.method == 'POST':

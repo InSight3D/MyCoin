@@ -23,7 +23,7 @@ mysql = MySQL(app)
 cg = CoinGeckoAPI()
 from helpers import *
 mycoin_helper = MyCoinHelper(cg)
-CORS(app, support_credentials=True)
+CORS(app, support_credentials=True, resources={r"/*": {"origins": "*"}})
 
 @app.route('/test', methods=['GET', 'POST'])
 def test():
@@ -65,7 +65,6 @@ def register():
         return jsonify({'message': 'Please use POST method'})
 
 @app.route('/login', methods=['POST', 'GET'])
-@cross_origin()
 def login():
     users = Table('users', "email", "password", "first_name", "last_name", "account_value")
     if request.method == 'POST':

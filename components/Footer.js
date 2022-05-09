@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
-import { DotsCircleHorizontalIcon } from '@heroicons/react/solid'
+import { DotsCircleHorizontalIcon, MailIcon, CodeIcon, ChatIcon, LockClosedIcon } from '@heroicons/react/solid'
 
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
           <Image src="/logo.svg" width="80" height="50" alt="logo" />
           <div>
             <p className=' w-[346px] text-sm text-center font-medium'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque commodo vulputate rhoncus, feugiat in.
+              Copyright 2022 MyCoin by InSight3D. All rights reserved.
             </p>
           </div>
         </div>
@@ -40,10 +40,10 @@ const Footer = () => {
 
          {/* Soical media Icons   */}
         <div className='flex space-x-6 justify-center '>
-          <DotsCircleHorizontalIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <DotsCircleHorizontalIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <DotsCircleHorizontalIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <DotsCircleHorizontalIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <MailIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <CodeIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <ChatIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <LockClosedIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
         </div>
       </footer>
     </>

@@ -46,14 +46,15 @@ def get_current_time():
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
+    content_type = request.headers.get('Content-Type')
     table = Table('users', "email", "password", "first_name", "last_name", "account_value")
-    if request.method == 'POST':
+    if content_type == 'application/json':
         
-
-        email = request.form['email']
-        password = request.form['password']
-        first_name = request.form['first_name']
-        last_name = request.form['last_name']
+        data = request.get_json()
+        email = data['email']
+        password = data['password']
+        first_name =   data['first_name']
+        last_name = data['last_name']
         account_value = 10000
 
         if isnewuser(email):
@@ -65,13 +66,13 @@ def register():
         return jsonify({'message': 'Please use POST method'})
 
 @app.route('/login', methods=['POST', 'GET'])
-@cross_origin()
 def login():
     users = Table('users', "email", "password", "first_name", "last_name", "account_value")
-    if request.method == 'POST':
-        
-        email = request.form['email']
-        password = request.form['password']
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
+        email = data['email']
+        password = data['password']
 
         user = users.getone('email', email)
         accPass = user.get('password')
@@ -88,11 +89,13 @@ def login():
 
 @app.route('/buytoken', methods=['POST', 'GET'])
 def buy():
-    if request.method == 'POST':
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
 
-        token = request.form['token']
-        ammount = request.form['ammount']
-        email = request.form['email']
+        token = data['token']
+        ammount = data['ammount']
+        email = data['email']
 
         # get the usd ammount of the user
         users = Table('users', "email", "password", "first_name", "last_name", "account_value")
@@ -137,11 +140,13 @@ def buy():
 
 @app.route('/selltoken', methods=['POST', 'GET'])
 def sell():
-    if request.method == 'POST':
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
 
-        token = request.form['token']
-        ammount = request.form['ammount']
-        email = request.form['email']
+        token = data['token']
+        ammount = data['ammount']
+        email = data['email']
 
         # get all user holdings from crypto table
         users = Table('users', "email", "password", "first_name", "last_name", "account_value")
@@ -172,9 +177,11 @@ def sell():
 # Return all the tokens in json format for the user
 @app.route('/tokens', methods=['POST', 'GET'])
 def tokens():
-    if request.method == 'POST':
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
 
-        email = request.form['email']
+        email = data['email']
 
         # get all user holdings from crypto table
         tokens = Table('cryptos', "email", "token", "token_ammount", "transaction_price")
@@ -194,9 +201,11 @@ def tokens():
 # Return USD value of all the tokens in json format for the user
 @app.route('/usdvalue', methods=['POST', 'GET'])
 def usdvalue():
-    if request.method == 'POST':
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
 
-        email = request.form['email']
+        email = data['email']
 
         # get all user holdings from crypto table
         tokens = Table('cryptos', "email", "token", "token_ammount", "transaction_price")
@@ -221,8 +230,10 @@ def usdvalue():
 
 @app.route('/tradingview/widget', methods=['POST', 'GET'])
 def tradingview_widget():
-    if request.method == 'POST':
-        token = request.form['token']
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
+        token = data['token']
     
         data = {
             "autosize": True,
@@ -247,8 +258,10 @@ def tradingview_widget():
 # Get Crypto price from ticker and return in json format
 @app.route('/token/price', methods=['POST', 'GET'])
 def price():
-    if request.method == 'POST':
-        token = request.form['token']
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
+        token = data['token']
         price = cg.get_price(ids=token, vs_currencies='usd')
         return jsonify({'price': price})
     else:
@@ -257,8 +270,10 @@ def price():
 # get token description from ticker and return in json format
 @app.route('/token/description', methods=['POST', 'GET'])
 def description():
-    if request.method == 'POST':
-        token = request.form['token']
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
+        token = data['token']
 
         description = mycoin_helper.get_description(token)
         return jsonify({'description': description})

@@ -2,7 +2,7 @@ import time
 from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
 from pycoingecko import CoinGeckoAPI
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import os 
 
 from dotenv import load_dotenv
@@ -23,16 +23,16 @@ mysql = MySQL(app)
 cg = CoinGeckoAPI()
 from helpers import *
 mycoin_helper = MyCoinHelper(cg)
-CORS(app, support_credentials=True, resources={r"/*": {"origins": "*"}})
+CORS(app, support_credentials=True, resources={r"/*": {"origins": "*"}}, headers="Content-Type", send_wildcard=True)
 
 @app.route('/test', methods=['GET', 'POST'])
 def test():
-    if request.method == 'POST':
-        data = request.form['name']
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        data = request.get_json()
         print(data)
-        return jsonify(data)
     else:
-        return jsonify({'message': 'Hello World!'})
+        print('not json')
 
 @app.route('/mysql_test', methods=['GET', 'POST'])
 def mysql_test():
@@ -65,6 +65,7 @@ def register():
         return jsonify({'message': 'Please use POST method'})
 
 @app.route('/login', methods=['POST', 'GET'])
+@cross_origin()
 def login():
     users = Table('users', "email", "password", "first_name", "last_name", "account_value")
     if request.method == 'POST':

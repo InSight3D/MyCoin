@@ -28,8 +28,14 @@ export default function Home() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
           <div className='h-8 w-8 bg-black rounded-full'></div>
           <MailIcon className="h-8 w-8 text-black hover:text-gray-500 cursor-pointer" />
-          <input className='border-2'>
-          </input>
+          <div className='absolute'>
+            <input className='border-2 h-14 w-[436px] rounded-2xl'></input>
+            <button className='bg-black relative right-[130px] h-14 rounded-r-2xl'>
+              <span className='text-white text-xsm'>
+                Get Started Today!
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* Logo */}

@@ -5,7 +5,7 @@
   "proxy": "http://localhost:5000",
   "scripts": {
     "dev": "next dev",
-    "start-api": "cd flask-api && flask run",
+    "api": "cd flask-api && flask run",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

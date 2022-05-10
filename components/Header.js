@@ -10,9 +10,11 @@ function login () {
   })
   .then(function (response) {
     console.log(response);
+    console.log("Login Successful");
   })
   .catch(function (error) {
     console.log(error);
+    console.log("Login Failed");
   });
  }
 

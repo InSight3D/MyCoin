@@ -6,11 +6,16 @@ import Image from 'next/image';
 function login () {
   axios.post('http://localhost:5000/login', {
     email: 'neil@insight3d.tech',
-    password: 'MyCoinAdmin123'
+    password: '123abc'
   })
   .then(function (response) {
     console.log(response);
-    console.log("Login Successful");
+    // check is responce equlas Login Successful
+    if (response.data === 'Incorrect password') {
+      console.log('Login Successful');
+    } else {
+      console.log('Password or Email is incorrect');
+    }
   })
   .catch(function (error) {
     console.log(error);

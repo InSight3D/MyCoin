@@ -12,9 +12,9 @@ function login () {
     console.log(response);
     // check is responce equlas Login Successful
     if (response.data === 'Incorrect password') {
-      console.log('Login Successful');
-    } else {
       console.log('Password or Email is incorrect');
+    } else {
+      console.log('Login Successful');
     }
   })
   .catch(function (error) {

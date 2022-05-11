@@ -9,7 +9,7 @@ function login () {
     password: '123abc'
   })
   .then(function (response) {
-    console.log(response);
+    console.log(response.data);
     // check is responce equlas Login Successful
     if (response.data === 'Incorrect password') {
       console.log('Password or Email is incorrect');

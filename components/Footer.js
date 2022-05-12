@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import { DotsCircleHorizontalIcon, MailIcon, CodeIcon, ChatIcon, LockClosedIcon } from '@heroicons/react/solid'
-
+import {  }
 
 const Footer = () => {
   return (

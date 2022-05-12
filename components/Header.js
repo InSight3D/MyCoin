@@ -6,7 +6,7 @@ import Image from 'next/image';
 function login () {
   axios.post('http://localhost:5000/login', {
     email: 'neil@insight3d.tech',
-    password: '123abc'
+    password: 'MyCoinAdmin123'
   })
   .then(function (res) {
     

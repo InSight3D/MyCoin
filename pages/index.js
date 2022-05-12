@@ -28,8 +28,8 @@ export default function Home() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
           <form className='flex items-center'>
             <div className='relative flex items-center drop-shadow-lg text-gray-600 focus-within:text-gray-900'>
-              <MailIcon className="h-8 w-8 text-grey-400 absolute pointer-events-none pr-2" />
-              <input className=' h-[58px] w-[300px] rounded-2xl pl-10 pr-3 font-semibold border-none ring-2 ring-gray-200'></input>
+              <MailIcon className="h-10 w-10 text-grey-400 absolute pointer-events-none pl-2" />
+              <input className=' h-[58px] w-[300px] rounded-2xl pl-12 pr-3 font-semibold border-none ring-2 ring-gray-200'></input>
             </div>
             <button className='bg-black h-[54px] right-[146px] rounded-2xl p-[13px] ml-2'>
               <span className='text-white text-[12px] font-extrabold'>
@@ -40,8 +40,8 @@ export default function Home() {
         </div>
 
         {/* Logo */}
-        <div className='absolute right-0 pr-52'>
-          <Image  src="/logo.svg" width="300" height="280" alt="logo" />
+        <div className='absolute right-0 pr-52 mt-[62px]'>
+          <Image  src="/logo.svg" width="269" height="272" alt="logo" />
         </div>
       </div>
 

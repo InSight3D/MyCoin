@@ -8,10 +8,12 @@ function login () {
     email: 'neil@insight3d.tech',
     password: '123abc'
   })
-  .then(function (response) {
-    console.log(response.data);
+  .then(function (res) {
+    
+    const response = res.data;
+    console.log(response.message)
     // check is responce equlas Login Successful
-    if (response.data === 'Incorrect password') {
+    if (response.message === 'Incorrect password') {
       console.log('Password or Email is incorrect');
     } else {
       console.log('Login Successful');

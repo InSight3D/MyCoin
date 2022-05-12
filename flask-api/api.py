@@ -279,3 +279,62 @@ def description():
         return jsonify({'description': description})
     else:
         return jsonify({'message': 'Please use POST method'})
+
+# give user premuem access to the application in a new table
+@app.route('/premium/add', methods=['POST', 'GET'])
+def premium_add():
+    content_type = request.headers.get('Content-Type')
+    premum_users = Table('premium_users', "email")
+    if content_type == 'application/json':
+        data = request.get_json()
+
+        email = data['email']
+        if premum_users.getone('email', email):
+            return jsonify({'message': 'User already premium'})
+        else:
+            premum_users.insert('email', email)
+            return jsonify({'message': 'User added to premium'})
+    else:
+        return jsonify({'message': 'Please use POST method'})
+
+@app.route('/premium/remove', methods=['POST', 'GET'])
+def premium_remove():
+    content_type = request.headers.get('Content-Type')
+    premum_users = Table('premium_users', "email")
+    if content_type == 'application/json':
+        data = request.get_json()
+
+        email = data['email']
+        if premum_users.getone('email', email):
+            premum_users.delete('email', email)
+            return jsonify({'message': 'User removed from premium'})
+        else:
+            return jsonify({'message': 'User not premium'})
+    else:
+        return jsonify({'message': 'Please use POST method'})
+
+@app.route('/premium/check', methods=['POST', 'GET'])
+def premium_check():
+    content_type = request.headers.get('Content-Type')
+    premum_users = Table('premium_users', "email")
+    if content_type == 'application/json':
+        data = request.get_json()
+
+        email = data['email']
+        if premum_users.getone('email', email):
+            return jsonify({'message': 'User is premium'})
+        else:
+            return jsonify({'message': 'User is not premium'})
+    else:
+        return jsonify({'message': 'Please use POST method'})
+
+@app.route('/premium/users', methods=['POST', 'GET'])
+def premium_users():
+    content_type = request.headers.get('Content-Type')
+    premum_users = Table('premium_users', "email")
+    if content_type == 'application/json':
+        users = premum_users.getall('email')
+        return jsonify({'users': users})
+    else:
+        return jsonify({'message': 'Please use POST method'})
+        

@@ -21,26 +21,27 @@ export default function Home() {
         <meta property="og:title" content="My Coin" key="title" />
       </Head>
 
-      <div className='flex'>
+      <div className='flex relative'>
         {/* Text and input field */}
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div className=' relative ml-52 space-y-8 mt-28'>
+          <p className='text-4xl font-extrabold w-[560px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-          <div className='h-8 w-8 bg-black rounded-full'></div>
-          <MailIcon className="h-8 w-8 text-black hover:text-gray-500 cursor-pointer" />
-          <div className='absolute'>
-            <input className='border-2 h-14 w-[436px] rounded-2xl'></input>
-            <button className='bg-black relative right-[130px] h-14 rounded-r-2xl'>
-              <span className='text-white text-xsm'>
+          <form className='flex items-center'>
+            <div className='relative flex items-center drop-shadow-lg text-gray-600 focus-within:text-gray-900'>
+              <MailIcon className="h-8 w-8 text-grey-400 absolute pointer-events-none pr-2" />
+              <input className=' h-[58px] w-[300px] rounded-2xl pl-10 pr-3 font-semibold border-none ring-2 ring-gray-200'></input>
+            </div>
+            <button className='bg-black h-[54px] right-[146px] rounded-2xl p-[13px] ml-2'>
+              <span className='text-white text-[12px] font-extrabold'>
                 Get Started Today!
               </span>
             </button>
-          </div>
+          </form>
         </div>
 
         {/* Logo */}
-        <div>
-          <Image src="/logo.svg" width="300" height="280" alt="logo" />
+        <div className='absolute right-0 pr-52'>
+          <Image  src="/logo.svg" width="300" height="280" alt="logo" />
         </div>
       </div>
 

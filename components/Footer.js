@@ -2,7 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import { DotsCircleHorizontalIcon, MailIcon, CodeIcon, ChatIcon, LockClosedIcon } from '@heroicons/react/solid'
-import {  }
+import { AiFillGithub, AiOutlineMail  } from 'react-icons/ai'
+import { FaDiscord } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -40,10 +41,9 @@ const Footer = () => {
 
          {/* Soical media Icons   */}
         <div className='flex space-x-6 justify-center '>
-          <MailIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <CodeIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <ChatIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <LockClosedIcon className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <AiFillGithub className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <AiOutlineMail className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <FaDiscord className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
         </div>
       </footer>
     </>

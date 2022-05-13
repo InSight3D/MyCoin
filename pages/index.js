@@ -11,9 +11,6 @@ import { MailIcon } from '@heroicons/react/solid'
 
 export default function Home() {
 
-
-
-
   return (
     <>
       <Head>
@@ -21,7 +18,7 @@ export default function Home() {
         <meta property="og:title" content="My Coin" key="title" />
       </Head>
 
-      <div className='flex relative'>
+      <div className='flex relative h-10 mb-auto'>
         {/* Text and input field */}
         <div className=' relative ml-52 space-y-8 mt-28'>
           <p className='text-4xl font-extrabold w-[560px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -37,6 +34,8 @@ export default function Home() {
               </span>
             </button>
           </form>
+          <div className=' h-96 w-96 bg-black'></div>
+          
         </div>
 
         {/* Logo */}
@@ -44,7 +43,6 @@ export default function Home() {
           <Image  src="/logo.svg" width="269" height="272" alt="logo" />
         </div>
       </div>
-
     </>
   );
 

@@ -10,13 +10,12 @@ function login () {
   })
   .then(function (res) {
     
-    const response = res.data;
-    console.log(response.message)
+    const message = res.data.message
     // check is responce equlas Login Successful
-    if (response.message === 'Incorrect password') {
-      console.log('Password or Email is incorrect');
+    if (message === 'Incorrect password') {
+      console.log(message);
     } else {
-      console.log('Login Successful');
+      console.log(message);
     }
   })
   .catch(function (error) {

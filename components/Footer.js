@@ -8,7 +8,7 @@ import { FaDiscord } from 'react-icons/fa'
 const Footer = () => {
   return (
     <>
-      <footer className=' flex justify-center absolute bottom-0 space-y-6 flex-col w-full h-[300px] bg-gray-300'>
+      <footer className=' flex justify-center space-y-6 flex-col w-full h-[300px] bg-gray-300'>
 
         {/* Logo and description */}
         <div className=' flex flex-col my-1  justify-center items-center'>

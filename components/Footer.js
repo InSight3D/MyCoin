@@ -44,8 +44,12 @@ const Footer = () => {
           <a href='https://github.com/insight3d/mycoin'>
             <AiFillGithub className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
           </a>
-          <AiFillMail className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <FaDiscord className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <a href="mailto://neil@insight3d.tech">
+            <AiFillMail className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          </a>
+          <a href="https://discord.gg/mycoin">
+            <FaDiscord className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          </a>
         </div>
       </footer>
     </>

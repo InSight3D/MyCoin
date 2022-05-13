@@ -3,6 +3,3 @@ flask_mysqldb
 pycoingecko
 flask_cors
 python-dotenv
-
-Venv for windows: 
-venv\Scripts\activate

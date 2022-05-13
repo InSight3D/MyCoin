@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import { DotsCircleHorizontalIcon, MailIcon, CodeIcon, ChatIcon, LockClosedIcon } from '@heroicons/react/solid'
-import { AiFillGithub, AiOutlineMail  } from 'react-icons/ai'
+import { AiFillGithub, AiFillMail  } from 'react-icons/ai'
 import { FaDiscord } from 'react-icons/fa'
 
 const Footer = () => {
@@ -41,9 +41,15 @@ const Footer = () => {
 
          {/* Soical media Icons   */}
         <div className='flex space-x-6 justify-center '>
-          <AiFillGithub className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <AiOutlineMail className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
-          <FaDiscord className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <a href='https://github.com/insight3d/mycoin'>
+            <AiFillGithub className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          </a>
+          <a href="mailto://neil@insight3d.tech">
+            <AiFillMail className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          </a>
+          <a href="https://discord.gg/mycoin">
+            <FaDiscord className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          </a>
         </div>
       </footer>
     </>

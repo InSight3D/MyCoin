@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react'
 import axios from "axios";
 import Navigation from '../components/Header';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import { MailIcon } from '@heroicons/react/solid'
 import PurpleButton from '../components/buttons/PurpleButton';
 
@@ -22,8 +22,8 @@ export default function Home() {
         <div className='flex relative h-10 mb-auto'>
           {/* Text and input field */}
           <div className=' relative ml-52 space-y-8 mt-28'>
-            <p className='text-4xl font-extrabold w-[560px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <p className='text-4xl font-extrabold w-[560px]'>MyCoin</p>
+            <p>A Free Mock Crypto Exchange With Acadamy</p>
             <form className='flex items-center'>
               <div className='relative flex items-center drop-shadow-lg text-gray-600 focus-within:text-gray-900'>
                 <MailIcon className="h-10 w-10 text-grey-400 absolute pointer-events-none pl-2" />
@@ -35,7 +35,6 @@ export default function Home() {
                 </span>
               </button>
             </form>
-
           </div>
 
 

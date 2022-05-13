@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react'
 import axios from "axios";
 import Navigation from '../components/Header';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import { MailIcon } from '@heroicons/react/solid'
 
 

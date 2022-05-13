@@ -5,6 +5,7 @@ import axios from "axios";
 import Navigation from '../components/Header';
 import Footer from '../components/footer';
 import { MailIcon } from '@heroicons/react/solid'
+import PurpleButton from '../components/buttons/PurpleButton';
 
 
 
@@ -46,6 +47,20 @@ export default function Home() {
         </div>
 
         <div className=' w-full h-96 my-80 bg-[#80E8EC]'>
+          <div class="min-h-screen flex items-center justify-center">
+            <div class="grid grid-cols-3 gap-24 p-5">
+              <div class=" bg-white border-2 flex text-white text-lg font-bold text-center p-10 rounded-lg ">
+                <PurpleButton/>
+              </div>
+              <div class=" bg-white border-2 text-white text-lg font-bold text-center p-10 rounded-lg">
+                <PurpleButton/>
+              </div>
+              <div class=" bg-white border-2 text-white text-lg font-bold text-center p-10 rounded-lg">
+                <PurpleButton/>
+              </div>
+            </div>
+          </div>
+
 
           {/*  <div className=' w-full h-96 my-80 grid grid-rows-3 gap-4 '>
             <div className=' border-2 border-red-500'>
@@ -54,7 +69,7 @@ export default function Home() {
               <div className='bg-gray-400 h-16'></div>
             </div>
         </div> */}
-        
+
         </div>
       </div>
 

@@ -41,7 +41,9 @@ const Footer = () => {
 
          {/* Soical media Icons   */}
         <div className='flex space-x-6 justify-center '>
-          <AiFillGithub className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          <a href='https://github.com/insight3d/mycoin'>
+            <AiFillGithub className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+          </a>
           <AiFillMail className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
           <FaDiscord className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
         </div>

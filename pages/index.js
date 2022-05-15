@@ -53,17 +53,17 @@ export default function Home() {
           <div className='text-center text-2xl font-bold '>
             <p>MyCoin Academy</p>
           </div>
-          <div class=" absolute left-0 right-0 bottom-[-55px] flex items-center justify-center">
-            <div class="grid grid-cols-3 gap-24 p-5">
-              <div class=" bg-white border-2 flex flex-col items-center rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg  ">
+          <div className=" absolute left-0 right-0 bottom-[-55px] flex items-center justify-center">
+            <div className="grid grid-cols-3 gap-24 p-5">
+              <div className=" bg-white border-2 flex flex-col items-center rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg  ">
                 <FaSchool className='text-black text-[200px]'/>
                 <PurpleButton/>
               </div>
-              <div class=" bg-white border-2 flex flex-col items-center rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
+              <div className=" bg-white border-2 flex flex-col items-center rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
                 <BsCoin className='text-black text-[150px] mb-[50px]'/>
                 <PurpleButton/>
               </div>
-              <div class="  bg-white border-2 flex flex-col items-center rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
+              <div className="  bg-white border-2 flex flex-col items-center rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
                 <FaEthereum className='text-black text-[150px] mb-[50px]'/>
                 <PurpleButton/>
               </div>

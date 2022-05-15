@@ -14,4 +14,3 @@ class MyCoinHelper:
     def get_coin_name(self, ids):
         data = self.coin_data.get_coin_by_id(ids=ids)
         return data['name']
-    

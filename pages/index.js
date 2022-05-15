@@ -11,8 +11,6 @@ import { BsCoin } from "react-icons/bs";
 import PurpleButton from '../components/buttons/PurpleButton';
 
 
-
-
 export default function Home() {
 
   return (

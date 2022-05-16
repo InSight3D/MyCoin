@@ -31,6 +31,24 @@ class Table():
         result = cur.execute("SELECT * FROM %s" %self.table)
         data = cur.fetchall(); return data
 
+    # update value where column = value
+    def update(self, colum, value, *args):
+        data = ""
+        for arg in args:
+            data += "%s = \"%s\"," %(colum, arg)
+        cur = mysql.connection.cursor()
+        cur.execute("UPDATE %s SET %s WHERE %s = \"%s\"" %(self.table, data[:len(data)-1], colum, value))
+        mysql.connection.commit()
+        cur.close()
+
+
+    # get all where column = value
+    def getallwhere(self, column, value):
+        data = {}; cur = mysql.connection.cursor()
+        result = cur.execute("SELECT * FROM %s WHERE %s = \"%s\"" %(self.table, column, value))
+        if result > 0: data = cur.fetchall()
+        cur.close(); return data
+
     #get one value from the table based on a column's data
     #EXAMPLE using blockchain: ...getone("hash","00003f73gh93...")
     def getone(self, search, value):
@@ -43,6 +61,15 @@ class Table():
     def deleteone(self, search, value):
         cur = mysql.connection.cursor()
         cur.execute("DELETE from %s where %s = \"%s\"" %(self.table, search, value))
+        mysql.connection.commit(); cur.close()
+    
+    def deleteonewhere(self, column, value, *args):
+        # make a list of all the columns to delete
+        data = ""
+        for arg in args:
+            data += "%s = \"%s\"," %(column, arg)
+        cur = mysql.connection.cursor()
+        cur.execute("DELETE from %s where %s = \"%s\"" %(self.table, data[:len(data)-1], value))
         mysql.connection.commit(); cur.close()
 
     #delete all values from the table.

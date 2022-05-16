@@ -1,4 +1,5 @@
 
+from numpy import true_divide
 from api import mysql
 from email import message
 import smtplib, ssl
@@ -41,6 +42,27 @@ class Table():
         mysql.connection.commit()
         cur.close()
 
+    # replace the value of a column in the table where the email is the same
+    def replace(self, column, value, *args):
+        data = ""
+        for arg in args:
+            data += "%s = \"%s\"," %(column, arg)
+        cur = mysql.connection.cursor()
+        cur.execute("REPLACE INTO %s SET %s WHERE %s = \"%s\"" %(self.table, data[:len(data)-1], column, value))
+        mysql.connection.commit()
+        cur.close()
+
+    def selltoken(self, email, token, ammount):
+        cur = mysql.connection.cursor()
+        print(ammount)
+        data = True
+        print(email)
+        if data:
+            # update the ammount of tokens where email = email and token = token
+            cur.execute(f"UPDATE cryptos SET token_ammount = {ammount} WHERE email = {email} AND token = {token}")
+            cur.close()
+        else:
+            cur.close()
 
     # get all where column = value
     def getallwhere(self, column, value):
@@ -69,7 +91,7 @@ class Table():
         for arg in args:
             data += "%s = \"%s\"," %(column, arg)
         cur = mysql.connection.cursor()
-        cur.execute("DELETE from %s where %s = \"%s\"" %(self.table, data[:len(data)-1], value))
+        cur.execute(f"DELETE FROM {self.table} WHERE {data[:len(data)-1]} = ?", (value, ))
         mysql.connection.commit(); cur.close()
 
     #delete all values from the table.

@@ -20,6 +20,7 @@ def buy():
         users = Table('users', "email", "password", "first_name", "last_name", "account_value")
         user = users.getone('email', email)
         accValue = user.get('account_value')
+        print(accValue)
         if user:
             account_value = accValue
             # get the price of the token
@@ -83,13 +84,17 @@ def sell():
                     # get the price of the token
                     price = cg.get_price(ids=token, vs_currencies='usd')
                     token_price = price[token]['usd']
+
                     # calculate the transaction value
                     transaction_value = int(token_price) * int(ammount)
                     # update the user account value
                     account_value = int(account_value) + int(transaction_value)
                     users.update('account_value', account_value, 'email', email)
-                    # delete the token from the database where the email is the same as the user
-                    tokens.deleteonewhere('email', email, 'token', token)
+
+                    # update the token ammount
+                    ammount = int(i['token_ammount']) - int(ammount)
+                    tokens.selltoken(email, token, ammount)
+
                     return jsonify({'message': 'Transaction successful'})
             return jsonify({'message': 'Token not found'})
         else:

@@ -22,19 +22,19 @@ const Footer = () => {
         </div>
         {/* Links   */}
         <div className='space-x-6 flex justify-center items-center font-medium'>
-          <Link href='/'>
+          <Link href='/signup'>
             <a className='hover:text-pink-600'>Sign Up</a>
           </Link>
-          <Link href='/'>
-            <a className='hover:text-pink-600'>Live Support</a>
+          <Link href='mailto://neil@insight3d.tech'>
+            <a className='hover:text-pink-600'>Support</a>
           </Link>
-          <Link href='/'>
+          <Link href='https://github.com/insight3d/mycoin'>
             <a className='hover:text-pink-600'>GitHub</a>
           </Link>
-          <Link href='/'>
+          <Link href='https://insight3d.tech'>
             <a className='hover:text-pink-600'>InSight3D</a>
           </Link>
-          <Link href='/'>
+          <Link href='/academy'>
             <a className='hover:text-pink-600'>MyCoin Academy</a>
           </Link>
         </div>

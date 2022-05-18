@@ -92,15 +92,21 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-36">
               <div className=" bg-white  flex flex-col h-60 items-center space-y-7 rounded-3xl text-white text-lg font-bold text-center px-20 py-6 drop-shadow-lg  ">
                 <FaSchool className='text-black text-[150px]'/>
-                <PurpleButton/>
+                <a href='#academy'>
+                  <PurpleButton/>
+                </a>
               </div>
               <div className=" bg-white  flex flex-col h-60 items-center space-y-10 rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
                 <BsCoin className='text-black text-[100px] '/>
-                <PurpleButton/>
+                <a href='#trading'>
+                  <PurpleButton/>
+                </a>
               </div>
               <div className="  bg-white flex flex-col h-60 items-center space-y-10  rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
                 <FaEthereum className='text-black text-[100px] '/>
-                <PurpleButton/>
+                <a href='#community'>
+                  <PurpleButton/>
+                </a>
               </div>
             </div>
           </div>

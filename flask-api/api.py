@@ -39,11 +39,9 @@ from blueprints.crypto import *
 from blueprints.account import *
 
 # Rigister blueprints
-app.register_blueprint(school_tools)
-app.register_blueprint(premium)
-app.register_blueprint(trading)
-app.register_blueprint(crypto)
-app.register_blueprint(account)
+blueprint_list = [school_tools, premium, trading, crypto, account]
+for bp in blueprint_list:
+    app.register_blueprint(bp)
 
 
 if __name__ == '__main__':

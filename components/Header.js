@@ -58,12 +58,16 @@ function Navigation() {
 
           {/* secondary nav */}
           <div className=' flex items-center space-x-10 text-md '>
-            <button onClick = "window.location='https://devmycoin.netlify.app/api/auth/login';" className=' py-2 px-4 rounded-2xl hover:bg-gray-200 btn btn-outline btn-accent m-1 font-semibold'>
-              Login
-            </button>
-            <button onClick = "window.location='https://devmycoin.netlify.app/api/auth/login';" className='btn btn-outline btn-accent m-1 hover:bg-gray-700 bg-black text-white py-2 px-4 rounded-2xl font-medium '>
-              Get Started
-            </button>
+            <form action="https://devmycoin.netlify.app/api/auth/login">
+              <button type="submit" className=' py-2 px-4 rounded-2xl hover:bg-gray-200 btn btn-outline btn-accent m-1 font-semibold'>
+                Login
+              </button>
+            </form>
+            <form action="https://devmycoin.netlify.app/api/auth/login">
+              <button type="submit" className='btn btn-outline btn-accent m-1 hover:bg-gray-700 bg-black text-white py-2 px-4 rounded-2xl font-medium '>
+                Get Started
+              </button>
+            </form>
           </div>
         </div>
       </div>

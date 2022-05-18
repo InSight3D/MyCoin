@@ -11,19 +11,27 @@ import { useUser } from '@auth0/nextjs-auth0';
 import PurpleButton from '../components/buttons/PurpleButton';
 import { redirect } from 'next/dist/server/api-utils';
 
-
 export default function Home() {
   const { user, error, isLoading } = useUser();
   
   // check if user is equal to undefined
   if (user) {
+    console.log(user)
     axios.post('http://localhost:5000/account/login', {
       email: user.email,
       given_name: user.given_name,
       family_name: user.family_name,
     })
     .then(function (res) {
-      return redirect('/dashboard');
+      // redirect to dashboard page
+      console.log('Redirecting to dashboard page');
+      return (
+        <>
+          <Head>
+            <meta httpEquiv="Refresh" content="0; url='http://localhost:3000/dashboard'" />
+          </Head>
+        </>
+      )
     })
   }
   return (

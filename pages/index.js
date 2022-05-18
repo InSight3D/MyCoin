@@ -23,7 +23,7 @@ export default function Home() {
         <meta property="og:image" content="https://insight3d.github.io/MyCoin/public/logo.png" />
         <meta property="og:url" content="http://mycoin.insight3d.tech" />
         <meta name="twitter:card" content="summary_large_image" />
-
+      
         <meta property="og:description" content=" InSight3D MyCoin is a free mock crypto exhange that grants users $10,000 to buy and sell 100+ coins at live market price. The coins as well as money will have no real value, as it is a mock exchange. " />
         <meta property="og:site_name" content="MyCoin by InSight3D" />
         <meta name="twitter:image:alt" content="MyCoin" />
@@ -63,17 +63,17 @@ export default function Home() {
           <div className='text-center text-5xl font-extrabold '>
             <p className='mt-20  '>MyCoin Ecosystem</p>
           </div>
-          <div class=" absolute left-0 right-0 bottom-[-55px] flex items-center justify-center">
-            <div class="grid grid-cols-3 gap-36">
-              <div class=" bg-white  flex flex-col h-60 items-center space-y-7 rounded-3xl text-white text-lg font-bold text-center px-20 py-6 drop-shadow-lg  ">
+          <div className=" absolute left-0 right-0 bottom-[-55px] flex items-center justify-center">
+            <div className="grid grid-cols-3 gap-36">
+              <div className=" bg-white  flex flex-col h-60 items-center space-y-7 rounded-3xl text-white text-lg font-bold text-center px-20 py-6 drop-shadow-lg  ">
                 <FaSchool className='text-black text-[150px]'/>
                 <PurpleButton/>
               </div>
-              <div class=" bg-white  flex flex-col h-60 items-center space-y-10 rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
+              <div className=" bg-white  flex flex-col h-60 items-center space-y-10 rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
                 <BsCoin className='text-black text-[100px] '/>
                 <PurpleButton/>
               </div>
-              <div class="  bg-white flex flex-col h-60 items-center space-y-10  rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
+              <div className="  bg-white flex flex-col h-60 items-center space-y-10  rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
                 <FaEthereum className='text-black text-[100px] '/>
                 <PurpleButton/>
               </div>

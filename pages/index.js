@@ -63,17 +63,17 @@ export default function Home() {
           <div className='text-center text-5xl font-extrabold '>
             <p className='mt-20  '>MyCoin Ecosystem</p>
           </div>
-          <div class=" absolute left-0 right-0 bottom-[-55px] flex items-center justify-center">
-            <div class="grid grid-cols-3 gap-36">
-              <div class=" bg-white  flex flex-col h-60 items-center space-y-7 rounded-3xl text-white text-lg font-bold text-center px-20 py-6 drop-shadow-lg  ">
+          <div className=" absolute left-0 right-0 bottom-[-55px] flex items-center justify-center">
+            <div className="grid grid-cols-3 gap-36">
+              <div className=" bg-white  flex flex-col h-60 items-center space-y-7 rounded-3xl text-white text-lg font-bold text-center px-20 py-6 drop-shadow-lg  ">
                 <FaSchool className='text-black text-[150px]'/>
                 <PurpleButton/>
               </div>
-              <div class=" bg-white  flex flex-col h-60 items-center space-y-10 rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
+              <div className=" bg-white  flex flex-col h-60 items-center space-y-10 rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
                 <BsCoin className='text-black text-[100px] '/>
                 <PurpleButton/>
               </div>
-              <div class="  bg-white flex flex-col h-60 items-center space-y-10  rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
+              <div className="  bg-white flex flex-col h-60 items-center space-y-10  rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
                 <FaEthereum className='text-black text-[100px] '/>
                 <PurpleButton/>
               </div>

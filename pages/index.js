@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import { MailIcon } from '@heroicons/react/solid'
 import { FaSchool,FaEthereum } from "react-icons/fa";
 import { BsCoin } from "react-icons/bs";
-
+import { useUser } from '@auth0/nextjs-auth0';
 import PurpleButton from '../components/buttons/PurpleButton';
 
 

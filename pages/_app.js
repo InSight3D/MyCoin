@@ -1,5 +1,7 @@
 import Layout from '../components/Layout'
 import '../styles/globals.css'
+import { UserProvider } from '@auth0/nextjs-auth0';
+import React from 'react';
 
 function MyApp({ Component, pageProps }) {
   
@@ -9,6 +11,5 @@ function MyApp({ Component, pageProps }) {
     </Layout>
   )
 }
-
 
 export default MyApp

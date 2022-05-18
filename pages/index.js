@@ -9,11 +9,23 @@ import { FaSchool,FaEthereum } from "react-icons/fa";
 import { BsCoin } from "react-icons/bs";
 import { useUser } from '@auth0/nextjs-auth0';
 import PurpleButton from '../components/buttons/PurpleButton';
+import { redirect } from 'next/dist/server/api-utils';
 
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
-  console.log(user);
+  
+  // check if user is equal to undefined
+  if (user) {
+    axios.post('http://localhost:5000/account/login', {
+      email: user.email,
+      given_name: user.given_name,
+      family_name: user.family_name,
+    })
+    .then(function (res) {
+      return redirect('/dashboard');
+    })
+  }
   return (
     <>
       <Head>
@@ -60,6 +72,10 @@ export default function Home() {
         
 
         {/* Light Blue section */}
+        <br>
+        </br>
+        <br>
+        </br>
         <div className='relative w-full h-96 my-80 bg-[#80E8EC] '>
           <div className='text-center text-5xl font-extrabold '>
             <p className='mt-20  '>MyCoin Ecosystem</p>
@@ -91,5 +107,3 @@ export default function Home() {
   );
 
 }
-
-

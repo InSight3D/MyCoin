@@ -3,7 +3,6 @@ import Navigation from "./Header";
 import { useRouter } from "next/router";
 import platformNavigation from "./platform/Header";
 
-
 export default function Layout({ children }) {
   const router = useRouter();
   if(router.pathname != "/dashboard" ) {

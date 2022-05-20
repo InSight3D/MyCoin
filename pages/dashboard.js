@@ -2,6 +2,7 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0"
 import { useUser } from "@auth0/nextjs-auth0";
 import Head from 'next/head';
 import Image from 'next/image';
+// import next/link
 
 export default function dashboard() {
     return (
@@ -18,7 +19,7 @@ export default function dashboard() {
                 <meta name="twitter:image:alt" content="MyCoin" />
             </Head>
             <h1>Welcome To The dashboard</h1>
-            <a href="/api/auth/logout">Logout</a>
+            
         </>
     )
 }

@@ -6,14 +6,15 @@ import Navigation from '../components/Header';
 import Footer from '../components/Footer';
 import { MailIcon } from '@heroicons/react/solid'
 import { FaSchool, FaEthereum } from "react-icons/fa";
-import { BsCoin } from "react-icons/bs";
+import { BsCoin, BsCheckLg } from "react-icons/bs";
 import { useUser } from '@auth0/nextjs-auth0';
 import PurpleButton from '../components/buttons/PurpleButton';
 import { redirect } from 'next/dist/server/api-utils';
+import { Checkmark } from '../components/misc/Checkmark';
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
-  
+
   // check if user is equal to undefined
   if (user) {
     console.log(user)
@@ -22,17 +23,17 @@ export default function Home() {
       given_name: user.given_name,
       family_name: user.family_name,
     })
-    .then(function (res) {
-      // redirect to dashboard page
-      console.log('Redirecting to dashboard page');
-      return (
-        <>
-          <Head>
-            <meta httpEquiv="Refresh" content="0; url='http://localhost:3000/dashboard'" />
-          </Head>
-        </>
-      )
-    })
+      .then(function (res) {
+        // redirect to dashboard page
+        console.log('Redirecting to dashboard page');
+        return (
+          <>
+            <Head>
+              <meta httpEquiv="Refresh" content="0; url='http://localhost:3000/dashboard'" />
+            </Head>
+          </>
+        )
+      })
   }
   return (
     <>
@@ -44,7 +45,7 @@ export default function Home() {
         <meta property="og:image" content="https://insight3d.github.io/MyCoin/public/logo.png" />
         <meta property="og:url" content="http://mycoin.insight3d.tech" />
         <meta name="twitter:card" content="summary_large_image" />
-      
+
         <meta property="og:description" content=" InSight3D MyCoin is a free mock crypto exhange that grants users $10,000 to buy and sell 100+ coins at live market price. The coins as well as money will have no real value, as it is a mock exchange. " />
         <meta property="og:site_name" content="MyCoin by InSight3D" />
         <meta name="twitter:image:alt" content="MyCoin" />
@@ -118,14 +119,68 @@ export default function Home() {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. s</p>
 
-                  <h1 className='my-4 font-bold'>Features</h1>
+                  <h1 className='mt-4 mb-2  font-bold'>Features</h1>
+
+                  <div className="grid grid-cols-2 grid-rows-6 ml-8">
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                  </div>
 
                 </div>
               </div>
               <div className='h-96 w-96 bg-gray-600'></div>
               <div className='h-96 w-96 bg-gray-600'></div>
-              <div className='h-96 w-96 bg-gray-600'></div>
-              <div className='h-96 w-96 bg-gray-600'></div>
+              <div className='h-96 w-96'>
+                <div>
+                  <div className='flex items-center space-x-6'>
+                    <FaSchool className='text-black text-[110px]' />
+                    <h1 className='font-bold text-4xl'>MyCoin Academy </h1>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. s</p>
+
+                  <h1 className='mt-4 mb-2  font-bold'>Features</h1>
+
+                  <div className="grid grid-cols-2 grid-rows-6 ml-8">
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                  </div>
+
+                </div>
+              </div>
+
+              <div className='h-96 w-96 '>
+
+                <div>
+                  <div className='flex items-center space-x-6'>
+                    <FaSchool className='text-black text-[110px]' />
+                    <h1 className='font-bold text-4xl'>MyCoin Academy </h1>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. s</p>
+
+                  <h1 className='mt-4 mb-2  font-bold'>Features</h1>
+
+                  <div className="grid grid-cols-2 grid-rows-6 ml-8">
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                    <Checkmark />
+                  </div>
+
+                </div>
+
+
+              </div>
               <div className='h-96 w-96 bg-gray-600'></div>
             </div>
 

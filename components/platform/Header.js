@@ -3,28 +3,8 @@ import axios from "axios";
 import React from 'react';
 import Image from 'next/image';
 
-function login () {
-  axios.post('http://localhost:5000/login', {
-    email: 'neil@insight3d.tech',
-    password: 'MyCoinAdmin123'
-  })
-  .then(function (res) {
-    
-    const message = res.data.message
-    // check is responce equlas Login Successful
-    if (message === 'Incorrect password') {
-      console.log(message);
-    } else {
-      console.log(message);
-    }
-  })
-  .catch(function (error) {
-    console.log(error);
-    console.log("Login Failed");
-  });
- }
 
-function Navigation() {
+function platformNavigation() {
   return (
     /* navbar */
     <header className='mr-24 ml-24'>
@@ -59,13 +39,8 @@ function Navigation() {
           {/* secondary nav */}
           <div className=' flex items-center space-x-10 text-md '>
             <form action="/api/auth/login">
-              <button type="submit" className=' py-2 px-4 rounded-2xl hover:bg-gray-200 btn btn-outline btn-accent m-1 font-semibold'>
-                Login
-              </button>
-            </form>
-            <form action="/api/auth/login">
               <button type="submit" className='btn btn-outline btn-accent m-1 hover:bg-gray-700 bg-black text-white py-2 px-4 rounded-2xl font-medium '>
-                Get Started
+                Logout
               </button>
             </form>
           </div>
@@ -76,4 +51,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default platformNavigation;

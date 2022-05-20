@@ -7,12 +7,33 @@ import Footer from '../components/Footer';
 import { MailIcon } from '@heroicons/react/solid'
 import { FaSchool, FaEthereum } from "react-icons/fa";
 import { BsCoin } from "react-icons/bs";
-
+import { useUser } from '@auth0/nextjs-auth0';
 import PurpleButton from '../components/buttons/PurpleButton';
-
+import { redirect } from 'next/dist/server/api-utils';
 
 export default function Home() {
-
+  const { user, error, isLoading } = useUser();
+  
+  // check if user is equal to undefined
+  if (user) {
+    console.log(user)
+    axios.post('http://localhost:5000/account/login', {
+      email: user.email,
+      given_name: user.given_name,
+      family_name: user.family_name,
+    })
+    .then(function (res) {
+      // redirect to dashboard page
+      console.log('Redirecting to dashboard page');
+      return (
+        <>
+          <Head>
+            <meta httpEquiv="Refresh" content="0; url='http://localhost:3000/dashboard'" />
+          </Head>
+        </>
+      )
+    })
+  }
   return (
     <>
       <Head>
@@ -23,15 +44,15 @@ export default function Home() {
         <meta property="og:image" content="https://insight3d.github.io/MyCoin/public/logo.png" />
         <meta property="og:url" content="http://mycoin.insight3d.tech" />
         <meta name="twitter:card" content="summary_large_image" />
-
+      
         <meta property="og:description" content=" InSight3D MyCoin is a free mock crypto exhange that grants users $10,000 to buy and sell 100+ coins at live market price. The coins as well as money will have no real value, as it is a mock exchange. " />
         <meta property="og:site_name" content="MyCoin by InSight3D" />
         <meta name="twitter:image:alt" content="MyCoin" />
 
       </Head>
-      <div className=' h-full mb-72'>
+      <div className=' h-full '>
         <div className='flex flex-col mb-80'>
-          <div className='flex relative h-10 mb-auto'>
+          <div className='flex relative h-10 mb-[450px]'>
             {/* Text and input field */}
             <div className=' relative ml-52 space-y-8 mt-28'>
               <p className='text-4xl font-extrabold w-[560px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -121,5 +142,3 @@ export default function Home() {
   );
 
 }
-
-

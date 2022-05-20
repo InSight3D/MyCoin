@@ -18,7 +18,7 @@ export default function dashboard() {
                 <meta name="twitter:image:alt" content="MyCoin" />
             </Head>
             <h1>Welcome To The dashboard</h1>
-            <a href="/api/auth/logout">Logout</a>
+
         </>
     )
 }

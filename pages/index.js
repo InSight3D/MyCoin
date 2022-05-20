@@ -10,7 +10,6 @@ import { BsCoin, BsCheckLg } from "react-icons/bs";
 import { useUser } from '@auth0/nextjs-auth0';
 import PurpleButton from '../components/buttons/PurpleButton';
 import { redirect } from 'next/dist/server/api-utils';
-import { Checkmark } from '../components/misc/Checkmark';
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -107,7 +106,7 @@ export default function Home() {
           </div>
 
 
-          <div className='mt-[228px] flex justify-center'>
+          <div className='mt-[228px] flex justify-center' id="academy">
             <div className='grid grid-cols-2 grid-rows-2 gap-12'>
               <div className='h-96 w-96 '>
                 <div>
@@ -122,22 +121,22 @@ export default function Home() {
                   <h1 className='mt-4 mb-2  font-bold'>Features</h1>
 
                   <div className="grid grid-cols-2 grid-rows-6 ml-8">
+                    {/*<Checkmark />
                     <Checkmark />
                     <Checkmark />
                     <Checkmark />
-                    <Checkmark />
-                    <Checkmark />
+                    <Checkmark />*/}
                   </div>
 
                 </div>
               </div>
               <div className='h-96 w-96 bg-gray-600'></div>
               <div className='h-96 w-96 bg-gray-600'></div>
-              <div className='h-96 w-96'>
+              <div className='h-96 w-96' id="trading">
                 <div>
                   <div className='flex items-center space-x-6'>
                     <FaSchool className='text-black text-[110px]' />
-                    <h1 className='font-bold text-4xl'>MyCoin Academy </h1>
+                    <h1 className='font-bold text-4xl'>MyCoin Trading </h1>
                   </div>
 
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -146,22 +145,22 @@ export default function Home() {
                   <h1 className='mt-4 mb-2  font-bold'>Features</h1>
 
                   <div className="grid grid-cols-2 grid-rows-6 ml-8">
+                    {/*<Checkmark />
                     <Checkmark />
                     <Checkmark />
                     <Checkmark />
-                    <Checkmark />
-                    <Checkmark />
+                    <Checkmark />*/}
                   </div>
 
                 </div>
               </div>
 
-              <div className='h-96 w-96 '>
+              <div className='h-96 w-96 ' id="community">
 
                 <div>
                   <div className='flex items-center space-x-6'>
                     <FaSchool className='text-black text-[110px]' />
-                    <h1 className='font-bold text-4xl'>MyCoin Academy </h1>
+                    <h1 className='font-bold text-4xl'>MyCoin Community </h1>
                   </div>
 
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -170,11 +169,11 @@ export default function Home() {
                   <h1 className='mt-4 mb-2  font-bold'>Features</h1>
 
                   <div className="grid grid-cols-2 grid-rows-6 ml-8">
+                    {/*<Checkmark />
                     <Checkmark />
                     <Checkmark />
                     <Checkmark />
-                    <Checkmark />
-                    <Checkmark />
+                    <Checkmark />*/}
                   </div>
 
                 </div>
@@ -192,7 +191,6 @@ export default function Home() {
 
         </div>
       </div>
-
     </>
   );
 

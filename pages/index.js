@@ -10,7 +10,7 @@ import { BsCoin, BsCheckLg } from "react-icons/bs";
 import { useUser } from '@auth0/nextjs-auth0';
 import PurpleButton from '../components/buttons/PurpleButton';
 import { redirect } from 'next/dist/server/api-utils';
-
+import { Checkmark } from '../components/misc/Checkmark';
 export default function Home() {
   const { user, error, isLoading } = useUser();
 
@@ -121,11 +121,11 @@ export default function Home() {
                   <h1 className='mt-4 mb-2  font-bold'>Features</h1>
 
                   <div className="grid grid-cols-2 grid-rows-6 ml-8">
-                    {/*<Checkmark />
                     <Checkmark />
                     <Checkmark />
                     <Checkmark />
-                    <Checkmark />*/}
+                    <Checkmark />
+                    <Checkmark />
                   </div>
 
                 </div>
@@ -145,11 +145,11 @@ export default function Home() {
                   <h1 className='mt-4 mb-2  font-bold'>Features</h1>
 
                   <div className="grid grid-cols-2 grid-rows-6 ml-8">
-                    {/*<Checkmark />
                     <Checkmark />
                     <Checkmark />
                     <Checkmark />
-                    <Checkmark />*/}
+                    <Checkmark />
+                    <Checkmark />
                   </div>
 
                 </div>
@@ -169,11 +169,11 @@ export default function Home() {
                   <h1 className='mt-4 mb-2  font-bold'>Features</h1>
 
                   <div className="grid grid-cols-2 grid-rows-6 ml-8">
-                    {/*<Checkmark />
                     <Checkmark />
                     <Checkmark />
                     <Checkmark />
-                    <Checkmark />*/}
+                    <Checkmark />
+                    <Checkmark />
                   </div>
 
                 </div>

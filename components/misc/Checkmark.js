@@ -1,7 +1,7 @@
 import React from 'react'
 import { BsCheckLg } from "react-icons/bs";
 
-export const Checkmark = () => {
+ const Checkmark = () => {
     return (
         <div className='flex'>
             <BsCheckLg className='text-green-400 mr-1' />
@@ -10,3 +10,5 @@ export const Checkmark = () => {
 
     )
 }
+
+export default Checkmark

@@ -11,7 +11,7 @@ import { CgCommunity } from "react-icons/cg";
 import { useUser } from '@auth0/nextjs-auth0';
 import PurpleButton from '../components/buttons/PurpleButton';
 import { redirect } from 'next/dist/server/api-utils';
-import { Checkmark } from '../components/misc/Checkmark';
+import Checkmark from '../components/misc/Checkmark';
 
 export default function Home() {
   const { user, error, isLoading } = useUser();

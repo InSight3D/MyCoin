@@ -45,11 +45,11 @@ function Navigation() {
 
           {/* primary nav */}
           <div className='flex items-center space-x-[46px] text-xl font-body-500 font-medium'>
-            <a className='header-link group hover:text-gray-700' href="#trading">
-              <span className='span'>Trading</span>
-            </a>
             <a className='header-link group hover:text-gray-700' href="#academy">
               <span className='span'>Academy</span>
+            </a>
+            <a className='header-link group hover:text-gray-700' href="#trading">
+              <span className='span'>Trading</span>
             </a>
             <a className='header-link group hover:text-gray-700' href="#community">
               <span className='span'>Community</span>

@@ -5,7 +5,7 @@ import { BsCheckLg } from "react-icons/bs";
     return (
         <div className='flex'>
             <BsCheckLg className='text-green-400 mr-1' />
-            <h1>Lorem epsum</h1>
+            <p>d</p>
         </div>
 
     )

@@ -58,7 +58,7 @@ function Navigation() {
 
           {/* secondary nav */}
           <div className=' flex items-center space-x-10 text-md '>
-            <form action="/api/auth/login">
+            <form action="/dashboard">
               <button type="submit" className=' py-2 px-4 rounded-2xl hover:bg-gray-200 btn btn-outline btn-accent m-1 font-semibold'>
                 Login
               </button>

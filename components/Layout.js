@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Navigation from "./Header";
 import { useRouter } from "next/router";
-import platformNavigation from "./platform/Header";
+import PlatformNavigation from "./platform/Header";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -16,7 +16,7 @@ export default function Layout({ children }) {
   } else {
     return (
       <div className="flex flex-col min-h-screen justify-between">
-        <platformNavigation />
+        <PlatformNavigation />
         {children}
         <Footer />
       </div>

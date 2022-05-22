@@ -27,16 +27,21 @@ export default function Home() {
       family_name: user.family_name,
     })
       .then(function (res) {
-        // redirect to dashboard page
-        console.log('Redirecting to dashboard page');
-        return (
-          <>
-            <Head>
-              <meta httpEquiv="Refresh" content="0; url='http://localhost:3000/dashboard'" />
-            </Head>
-          </>
-        )
-      })
+        const message = res.data.message
+        // check is responce equlas Login Successful
+        if (message === 'Login Successful') {
+          console.log(message);
+        } else {
+          console.log(message);
+        }
+      }
+      )
+      .catch(function (error) {
+        console.log(error);
+        console.log("Login Failed");
+      }
+      );
+
   }
   return (
     <>

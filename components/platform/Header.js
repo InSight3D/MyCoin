@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 
 
-function platformNavigation() {
+function PlatformNavigation() {
   return (
     /* navbar */
     <header className='mr-24 ml-24'>
@@ -13,7 +13,7 @@ function platformNavigation() {
 
           {/* logo */}
           <div className='flex space-x-4  '>
-            <Link href="/" passHref>
+            <Link href="/dashboard" passHref>
               <div className='flex space-x-2 cursor-pointer'>
                 <Image src="/logo.svg" width="80" height="50" alt="Logo" />
                 <a className='flex items-center py-5 px-2'>
@@ -25,20 +25,23 @@ function platformNavigation() {
 
           {/* primary nav */}
           <div className='flex items-center space-x-[46px] text-xl font-body-500 font-medium'>
-            <a className='header-link group hover:text-gray-700' href="#trading">
-              <span className='span'>Trading</span>
+            <a className='header-link group hover:text-gray-700' href="">
+              <span className='span'>Dashboard</span>
             </a>
-            <a className='header-link group hover:text-gray-700' href="#academy">
+            <a className='header-link group hover:text-gray-700' href="">
+              <span className='span'>Trade</span>
+            </a>
+            <a className='header-link group hover:text-gray-700' href="">
+              <span className='span'>Reaserch</span>
+            </a>
+            <a className='header-link group hover:text-gray-700' href="">
               <span className='span'>Academy</span>
-            </a>
-            <a className='header-link group hover:text-gray-700' href="#community">
-              <span className='span'>Community</span>
             </a>
           </div>
 
           {/* secondary nav */}
           <div className=' flex items-center space-x-10 text-md '>
-            <form action="/api/auth/login">
+            <form action="/api/auth/logout">
               <button type="submit" className='btn btn-outline btn-accent m-1 hover:bg-gray-700 bg-black text-white py-2 px-4 rounded-2xl font-medium '>
                 Logout
               </button>
@@ -51,4 +54,4 @@ function platformNavigation() {
   );
 }
 
-export default platformNavigation;
+export default PlatformNavigation;

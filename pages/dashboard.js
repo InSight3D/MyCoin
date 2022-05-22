@@ -18,7 +18,6 @@ export default function dashboard() {
                 <meta property="og:site_name" content="MyCoin by InSight3D" />
                 <meta name="twitter:image:alt" content="MyCoin" />
             </Head>
-            <h1>Welcome To The dashboard</h1>
         </>
     )
 }

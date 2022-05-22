@@ -69,7 +69,7 @@ export default function Home() {
                   <MailIcon className="h-10 w-10 text-grey-400 absolute pointer-events-none pl-2" />
                   <input className=' h-[58px] w-[300px] rounded-2xl pl-12 pr-3 font-semibold border-none ring-2 ring-gray-200'></input>
                 </div>
-                <form action='/api/auth/login'>
+                <form action='/dashboard'>
                   <button className='bg-black h-[54px] right-[146px] rounded-2xl p-[13px] ml-2'>
                     <span className='text-white text-[12px] font-extrabold'>
                       Get Started Today!
@@ -236,7 +236,7 @@ export default function Home() {
               <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'></div>
             </div>
           </div>
-          <form action='/api/auth/login'>
+          <form action='/dashboard'>
             <div className='flex justify-center items-center'>
               <div className='flex items-center p-8 mb-10 mt-32 w-7xl bg-gray-400 rounded-3xl'>
                 <div className='relative flex items-center drop-shadow-lg text-gray-600 focus-within:text-gray-900'>

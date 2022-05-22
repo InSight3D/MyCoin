@@ -63,7 +63,7 @@ function Navigation() {
                 Login
               </button>
             </form>
-            <form action="/api/auth/login">
+            <form action="/dashboard">
               <button type="submit" className='btn btn-outline btn-accent m-1 hover:bg-gray-700 bg-black text-white py-2 px-4 rounded-2xl font-medium '>
                 Get Started
               </button>

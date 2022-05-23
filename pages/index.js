@@ -69,19 +69,19 @@ export default function Home() {
                   <MailIcon className="h-10 w-10 text-grey-400 absolute pointer-events-none pl-2" />
                   <input className=' h-[58px] w-[300px] rounded-2xl pl-12 pr-3 font-semibold border-none ring-2 ring-gray-200'></input>
                 </div>
-                <form action='/dashboard'>
+                <div>
                   <button className='bg-black h-[54px] right-[146px] rounded-2xl p-[13px] ml-2'>
                     <span className='text-white text-[12px] font-extrabold'>
                       Get Started Today!
                     </span>
                   </button>
-                </form>
+                </div>
               </form>
             </div>
 
             {/* Logo */}
             <div className='absolute right-0 pr-52 mt-[85px]'>
-              <Image src="/logo.svg" width="269" height="272" alt="logo" />
+              <img className=' h-10 w-10 md:h-[500px] md:w-[500px]' src="/logo.svg" w alt="logo" />
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function Home() {
           </div>
           {/* Grid */}
           <div className='mt-[228px] flex justify-center'>
-            <div className='grid grid-cols-2 grid-rows-2 gap-x-60 gap-y-52'>
+            <div className='grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-x-60 gap-y-52'>
               <div className='h-[514px] w-[454px] '>
                 <section id='academy'>
                     <div>

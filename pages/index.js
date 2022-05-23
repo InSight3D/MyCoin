@@ -84,6 +84,7 @@ export default function Home() {
               <img className=' h-10 w-10 md:h-[500px] md:w-[500px]' src="/logo.svg" w alt="logo" />
             </div>
           </div>
+          
         </div>
 
         {/* Light Blue section */}

@@ -5,7 +5,7 @@ import PlatformNavigation from "./platform/Header";
 
 export default function Layout({ children }) {
   const router = useRouter();
-  if(router.pathname != "/dashboard" ) {
+  if(router.pathname == "/" ) {
     return (
       <div className="flex flex-col min-h-screen justify-between">
         <Navigation />

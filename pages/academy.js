@@ -8,13 +8,13 @@ export default function dashboard() {
     return (
         <>
             <Head>
-                <title>MyCoin</title>
-                <meta property="og:title" content="MyCoin" />
+                <title>MyCoin Academy</title>
+                <meta property="og:title" content="MyCoin Academy" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://insight3d.github.io/MyCoin/public/logo.png" />
-                <meta property="og:url" content="http://mycoin.insight3d.tech" />
+                <meta property="og:url" content="http://mycoin.insight3d.tech/academy" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="og:description" content=" InSight3D MyCoin is a free mock crypto exhange that grants users $10,000 to buy and sell 100+ coins at live market price. The coins as well as money will have no real value, as it is a mock exchange. " />
+                <meta property="og:description" content="MyCoin Academy is a platfrom where users can learn trading and development. Must be logged in to accsess." />
                 <meta property="og:site_name" content="MyCoin by InSight3D" />
                 <meta name="twitter:image:alt" content="MyCoin" />
             </Head>
@@ -23,7 +23,7 @@ export default function dashboard() {
             <div className='flex relative h-10 mb-[450px]'>
                 {/* Text and input field */}
                 <div className=' relative ml-52 space-y-8 mt-28'>
-                <p className='text-4xl font-extrabold w-[560px]'>MyCoin Dashboard</p>
+                <p className='text-4xl font-extrabold w-[560px]'>MyCoin Academy</p>
                 </div>
 
                 {/* Logo */}

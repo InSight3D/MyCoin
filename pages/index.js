@@ -59,7 +59,7 @@ export default function Home() {
 
       <div className=' h-full '>
         <div className='flex flex-col mb-80'>
-          <div className='flex relative h-10 mb-[450px]'>
+          <div className='flex  justify-around h-10 mb-[450px]'>
             {/* Text and input field */}
             <div className=' relative ml-52 space-y-8 mt-28'>
               <p className='text-4xl font-extrabold w-[560px]'>MyCoin by InSight3D</p>
@@ -80,11 +80,11 @@ export default function Home() {
             </div>
 
             {/* Logo */}
-            <div className='absolute right-0 pr-52 mt-[85px]'>
-              <img className=' h-10 w-10 md:h-[500px] md:w-[500px]' src="/logo.svg" w alt="logo" />
+            <div>
+              <img className=' h-[269px] w-[272px] lg:h-[500px] lg:w-[500px]' src="/logo.svg" w alt="logo" />
             </div>
           </div>
-          
+
         </div>
 
         {/* Light Blue section */}

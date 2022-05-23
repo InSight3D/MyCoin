@@ -31,7 +31,7 @@ function PlatformNavigation() {
               </Link>
             </div>
             <div className='header-link group hover:text-gray-700'>
-              <Link href="/Trade" passHref>
+              <Link href="/trade" passHref>
                 <span className='span'>Trade</span>
               </Link>
             </div>

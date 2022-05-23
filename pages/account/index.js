@@ -2,10 +2,10 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0"
 import { useUser } from "@auth0/nextjs-auth0";
 import Head from 'next/head';
 import Image from 'next/image';
-// import next/link
 
-export default function dashboard() {
-    const { user, error, isLoading } = useUser();
+export default function Dashboard() {
+    const { user, error, isLoading, context } = useUser();
+
     return (
         user && (
         <>

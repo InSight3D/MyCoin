@@ -25,18 +25,26 @@ function PlatformNavigation() {
 
           {/* primary nav */}
           <div className='flex items-center space-x-[46px] text-xl font-body-500 font-medium'>
-            <a className='header-link group hover:text-gray-700' href="/dashboard">
-              <span className='span'>Dashboard</span>
-            </a>
-            <a className='header-link group hover:text-gray-700' href="/trade">
-              <span className='span'>Trade</span>
-            </a>
-            <a className='header-link group hover:text-gray-700' href="/reaserch">
-              <span className='span'>Reaserch</span>
-            </a>
-            <a className='header-link group hover:text-gray-700' href="/academy">
-              <span className='span'>Academy</span>
-            </a>
+            <div className='header-link group hover:text-gray-700'>
+              <Link href="/dashboard" passHref>
+                <span className='span'>Dashboard</span>
+              </Link>
+            </div>
+            <div className='header-link group hover:text-gray-700'>
+              <Link href="/Trade" passHref>
+                <span className='span'>Trade</span>
+              </Link>
+            </div>
+            <div className='header-link group hover:text-gray-700'>
+              <Link href="/research" passHref>
+                <span className='span'>Research</span>
+              </Link>
+            </div>
+            <div className='header-link group hover:text-gray-700'>
+              <Link href="/academy" passHref>
+                <span className='span'>Academy</span>
+              </Link>
+            </div>
           </div>
 
           {/* secondary nav */}

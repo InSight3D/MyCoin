@@ -41,6 +41,11 @@ function PlatformNavigation() {
 
           {/* secondary nav */}
           <div className=' flex items-center space-x-10 text-md '>
+            <form action="/account">
+              <button type="submit" className=' py-2 px-4 rounded-2xl hover:bg-gray-200 btn btn-outline btn-accent m-1 font-semibold'>
+                account
+              </button>
+            </form>
             <form action="/api/auth/logout">
               <button type="submit" className='btn btn-outline btn-accent m-1 hover:bg-gray-700 bg-black text-white py-2 px-4 rounded-2xl font-medium '>
                 Logout

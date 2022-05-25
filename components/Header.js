@@ -45,15 +45,21 @@ function Navigation() {
 
           {/* primary nav */}
           <div className='flex items-center space-x-[46px] text-xl font-body-500 font-medium'>
-            <a className='header-link group hover:text-gray-700' href="#academy">
-              <span className='span'>Academy</span>
-            </a>
-            <a className='header-link group hover:text-gray-700' href="#trading">
-              <span className='span'>Trading</span>
-            </a>
-            <a className='header-link group hover:text-gray-700' href="#community">
-              <span className='span'>Community</span>
-            </a>
+            <div className='header-link group hover:text-gray-700'>
+              <Link href="#academy" smooth={true} passHref>
+                <span className='span'>Academy</span>
+              </Link>
+            </div>
+            <div className='header-link group hover:text-gray-700'>
+              <Link href="#trading" smooth={true} passHref>
+                <span className='span'>Trading</span>
+              </Link>
+            </div>
+            <div className='header-link group hover:text-gray-700'>
+              <Link href="#community" smooth={true} passHref>
+                <span className='span'>Community</span>
+              </Link>
+            </div>
           </div>
 
           {/* secondary nav */}

@@ -3,6 +3,8 @@
 
 InSight3D MyCoin is a free mock crypto exhange that grants users $10,000 to buy & sell 100+ coins at live market price. The coins as well as money will have no real value, as it is a mock exchange.
 
+## Project Board
+https://github.com/InSight3D/MyCoin/projects/2
 
 ## Developers
 

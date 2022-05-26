@@ -17,6 +17,7 @@ export default function dashboard() {
                 <meta property="og:description" content=" InSight3D MyCoin is a free mock crypto exhange that grants users $10,000 to buy and sell 100+ coins at live market price. The coins as well as money will have no real value, as it is a mock exchange. " />
                 <meta property="og:site_name" content="MyCoin by InSight3D" />
                 <meta name="twitter:image:alt" content="MyCoin" />
+                <link rel="icon" href="/logo.ico" />
             </Head>
             <div className=' h-full '>
             <div className='flex flex-col mb-80'>

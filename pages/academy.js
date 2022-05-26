@@ -17,6 +17,7 @@ export default function dashboard() {
                 <meta property="og:description" content="MyCoin Academy is a platfrom where users can learn trading and development. Must be logged in to accsess." />
                 <meta property="og:site_name" content="MyCoin by InSight3D" />
                 <meta name="twitter:image:alt" content="MyCoin" />
+                <link rel="icon" href="/logo.ico" />
             </Head>
             <div className=' h-full '>
             <div className='flex flex-col mb-80'>

@@ -57,17 +57,17 @@ export default function Home() {
         <meta name="twitter:image:alt" content="MyCoin" />
       </Head>
 
-      <div className=' h-full '>
+      <div className='h-full '>
         <div className='flex flex-col mb-80'>
           <div className='flex  justify-around h-10 mb-[450px]'>
             {/* Text and input field */}
-            <div className=' relative ml-52 space-y-8 mt-28'>
+            <div className='relative space-y-8 ml-52 mt-28'>
               <p className='text-8xl font-extrabold w-[560px]'>MyCoin by InSight3D</p>
               <p className='text-2xl'>The worlds first free to use mock Crypto Exchange with <br/>Academy and Supportive Community.</p>
               <form className='flex items-center' action='/api/auth/login'>
-                <div className='relative flex items-center drop-shadow-lg text-gray-600 focus-within:text-gray-900'>
-                  <MailIcon className="h-10 w-10 text-grey-400 absolute pointer-events-none pl-2" />
-                  <input className=' h-[80px] w-[450px] text-xl rounded-2xl pl-12 pr-3 font-semibold border-none ring-2 ring-gray-200'></input>
+                <div className='relative flex items-center text-gray-600 drop-shadow-lg focus-within:text-gray-900'>
+                  <MailIcon className="absolute w-12 h-12 pl-2 pointer-events-none text-grey-400" />
+                  <input className=' h-[80px] w-[450px] text-xl rounded-2xl pl-14 pr-3 font-semibold border-none ring-2 ring-gray-200'></input>
                 </div>
                 <div>
                   <button className='bg-black h-[80px] w-[200px] right-[146px] rounded-2xl p-[13px] ml-2'>
@@ -90,26 +90,26 @@ export default function Home() {
         {/* Light Blue section */}
         <div>
           <div className='relative w-full h-96  bg-[#80E8EC]'>
-            <div className='text-center text-5xl font-extrabold pt-20'>
+            <div className='pt-20 text-5xl font-extrabold text-center'>
               <p>MyCoin Ecosystem</p>
             </div>
             <div className="absolute left-0 right-0 bottom-[-55px] flex items-center justify-center">
               <div className="grid grid-cols-3 gap-36">
-                <div className=" bg-white  flex flex-col h-60 items-center space-y-7 rounded-3xl text-white text-lg font-bold text-center px-20 py-6 drop-shadow-lg  ">
+                <div className="flex flex-col items-center px-20 py-6 text-lg font-bold text-center text-white bg-white max-h-60 space-y-7 rounded-3xl drop-shadow-lg">
                   <FaSchool className='text-black text-[150px]' />
                   <Link to="academy" smooth={true} offset={-150}>
                     <PurpleButton />
                   </Link>
                 </div>
-                <div className=" bg-white  flex flex-col h-60 items-center space-y-10 rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
-                  <BsCoin className='text-black text-[100px] ' />
-                  <Link to="trading" smooth={true} offset={-150}>
-                    <PurpleButton />
+                <div className="flex flex-col items-center justify-between text-lg font-bold text-center text-white bg-white max-h-60 rounded-3xl drop-shadow-lg">
+                  <BsCoin className='text-black text-[100px] mt-10 ' />
+                  <Link className='mb-6' to="trading" smooth={true} offset={-150}>
+                    <PurpleButton  />
                   </Link>    
                 </div>
-                <div className="  bg-white flex flex-col justify-between h-60 items-center   rounded-3xl text-white text-lg font-bold text-center px-20 py-10 drop-shadow-lg">
-                  <FaEthereum className='text-black text-[100px] ' />
-                  <Link to='community' smooth={true} offset={-150}>
+                <div className="flex flex-col items-center justify-between text-lg font-bold text-center text-white bg-white h-60 rounded-3xl drop-shadow-lg">
+                  <FaEthereum className='text-black text-[100px] mt-10 ' />
+                  <Link className= "mb-6" to='community' smooth={true} offset={-150}>
                     <PurpleButton className="mt-[100px]" />
                   </Link>
                 </div>
@@ -118,39 +118,39 @@ export default function Home() {
           </div>
           {/* Grid */}
           <div className='mt-[228px] flex justify-center'>
-            <div className='grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-x-60 gap-y-52'>
+            <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-52'>
               <div className='h-[514px] w-[454px] '>
                 <section id='academy'>
                     <div>
                       <div className='flex items-center space-x-6'>
                         <FaSchool className='text-black text-[110px]' />
-                        <h1 className='font-bold text-4xl'>MyCoin Academy </h1>
+                        <h1 className='text-4xl font-bold'>MyCoin Academy </h1>
                       </div>
                       <br/>
                       <p>MyCoin Academy offers both a free and paid plan. Free users gain accsess to introductory courses aiming to increse increase awareness, safety, and competency in the Web3 space.
                         The paid plan unlocks more advaced courses such as Ethereum Development, Trading Strategies, as well as live events such as prensentations and expert panels to help you learn more about the Web3 ecosystem.
                         After completing any course users will get a certificate of completion, and paid users will also receve an NFT corosponding to the course they finished.
                       </p>
-                      <h1 className='mt-4 mb-2  font-bold'>Features</h1>
+                      <h1 className='mt-4 mb-2 font-bold'>Features</h1>
                       <div className="grid grid-cols-2 grid-rows-6 ml-8">
                       <div className='flex'>
-                        <BsCheckLg className='text-green-400 mr-1' />
+                        <BsCheckLg className='mr-1 text-green-400' />
                         <p>Free & Paid Plan</p>
                       </div>
                       <div className='flex'>
-                        <BsCheckLg className='text-green-400 mr-1' />
+                        <BsCheckLg className='mr-1 text-green-400' />
                         <p>Web Based</p>
                       </div>
                       <div className='flex'>
-                        <BsCheckLg className='text-green-400 mr-1' />
+                        <BsCheckLg className='mr-1 text-green-400' />
                         <p>Course Certificates</p>
                       </div>
                       <div className='flex'>
-                        <BsCheckLg className='text-green-400 mr-1' />
+                        <BsCheckLg className='mr-1 text-green-400' />
                         <p>Live Events</p>
                       </div>
                       <div className='flex'>
-                        <BsCheckLg className='text-green-400 mr-1' />
+                        <BsCheckLg className='mr-1 text-green-400' />
                         <p>Trading & Development Courses</p>
                       </div>
                       </div>
@@ -164,32 +164,32 @@ export default function Home() {
                   <div>
                     <div className='flex items-center space-x-6'>
                       <BsCoin className='text-black text-[100px] ' />
-                      <h1 className='font-bold text-4xl'>MyCoin Trading </h1>
+                      <h1 className='text-4xl font-bold'>MyCoin Trading </h1>
                     </div>
                     <br/>
                     <p>MyCoin Trading will alow users to simulate trading using the skills aquired in the MyCoin Academy, or just for fun. Paid users will gain accsess to over 500
                       coins, and free users will gain accsess to the top 100 coins. Paid users will also be able to accses the paid courses in the Academy, and an ad free version for MyCoin.
                     </p>
-                    <h1 className='mt-4 mb-2  font-bold'>Features</h1>
+                    <h1 className='mt-4 mb-2 font-bold'>Features</h1>
                     <div className="grid grid-cols-2 grid-rows-6 ml-8">
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Free & Paid Plan</p>
                     </div>
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Mock Trading</p>
                     </div>
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Trading Community</p>
                     </div>
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Accsess to Academy</p>
                     </div>
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Over 100 Cryptocurrencies</p>
                     </div>
                     </div>
@@ -201,33 +201,33 @@ export default function Home() {
                   <div>
                     <div className='flex items-center space-x-6'>
                       <CgCommunity className='text-black text-[110px]' />
-                      <h1 className='font-bold text-4xl'>MyCoin Community </h1>
+                      <h1 className='text-4xl font-bold'>MyCoin Community </h1>
                     </div>
                     <br/>
                     <p>The MyCoin Community will be accsesable to all users of MyCoin. MyCoin will host live events such as workshops, expert panels, and prensentations. Along
                       with events, members will have accsess to support and community chats where they can ask questions, and get help from other members.
                       Paid user will also have accsess to the Premium Community, where there will be Paid Member only events and chats, along with private tutoring sessions.
                     </p>
-                    <h1 className='mt-4 mb-2  font-bold'>Features</h1>
+                    <h1 className='mt-4 mb-2 font-bold'>Features</h1>
                     <div className="grid grid-cols-2 grid-rows-6 ml-8">
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Community Chats</p>
                     </div>
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Live Events</p>
                     </div>
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Community Forums</p>
                     </div>
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Private Tutoring</p>
                     </div>
                     <div className='flex'>
-                      <BsCheckLg className='text-green-400 mr-1' />
+                      <BsCheckLg className='mr-1 text-green-400' />
                       <p>Free and Paid Communities</p>
                     </div>
                     </div>
@@ -238,10 +238,10 @@ export default function Home() {
             </div>
           </div>
           <form action='/dashboard'>
-            <div className='flex justify-center items-center'>
-              <div className='flex items-center p-8 mb-10 mt-32 w-7xl bg-gray-400 rounded-3xl'>
-                <div className='relative flex items-center drop-shadow-lg text-gray-600 focus-within:text-gray-900'>
-                  <MailIcon className="h-20 w-20 text-grey-400 absolute pointer-events-none pl-2" />
+            <div className='flex items-center justify-center'>
+              <div className='flex items-center p-8 mt-32 mb-10 bg-gray-400 w-7xl rounded-3xl'>
+                <div className='relative flex items-center text-gray-600 drop-shadow-lg focus-within:text-gray-900'>
+                  <MailIcon className="absolute w-20 h-20 pl-2 pointer-events-none text-grey-400" />
                   <input className=' h-[80px] w-[800px] rounded-2xl pl-20 pr-6 font-semibold border-none ring-2 ring-gray-200 text-4xl'></input>
                 </div>
                 <div>

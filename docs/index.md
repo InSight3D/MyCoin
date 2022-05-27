@@ -8,7 +8,7 @@ This page is designed for the project admins as well as developers, however publ
 
 ### Developers
 
-Neil Shah  
+### Neil Shah  
 Portfolio: https://neilshah.dev  
 Linkedin: https://www.linkedin.com/in/neildhruvshah/  
 GitHub: https://github.com/NeilShah2026  
@@ -16,7 +16,7 @@ InSight3D: https://insight3d.tech
 
 Neil is a student who has been coding for over 5 years, and is the founder of the startup InSight3D, which is centered around Web3, building solutions for both individuals and companies. He is involved with numerous projects in the Web3 space, with the most recent and ambitious one being MyCoin. Along with being a serial entrepreneur and developer, Neil is also a tutor teacher for many students, and is currently employed at Code Ninja’s alongside his startups.  
   
-Sergey Belyaev  
+### Sergey Belyaev  
 Linkedin: https://www.linkedin.com/in/sergey-belyaev-aa7401b3/  
 GitHub: https://github.com/sbelka-1703  
   

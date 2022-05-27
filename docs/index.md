@@ -8,21 +8,21 @@ This page is designed for the project admins as well as developers, however publ
 
 ### Developers
 
-Neil Shah</br>
-Portfolio: https://neilshah.dev </br>
-Linkedin: https://www.linkedin.com/in/neildhruvshah/ </br>
-GitHub: https://github.com/NeilShah2026 </br>
-InSight3D: https://insight3d.tech </br>
+Neil Shah  
+Portfolio: https://neilshah.dev  
+Linkedin: https://www.linkedin.com/in/neildhruvshah/  
+GitHub: https://github.com/NeilShah2026  
+InSight3D: https://insight3d.tech  
 
-Neil is a student who has been coding for over 5 years, and is the founder of the startup InSight3D, which is centered around Web3, building solutions for both individuals and companies. He is involved with numerous projects in the Web3 space, with the most recent and ambitious one being MyCoin. Along with being a serial entrepreneur and developer, Neil is also a tutor teacher for many students, and is currently employed at Code Ninja’s alongside his startups. </br>
-</br>
-Sergey Belyaev</br>
-Linkedin: https://www.linkedin.com/in/sergey-belyaev-aa7401b3/ </br>
-GitHub: https://github.com/sbelka-1703 </br>
-</br>
+Neil is a student who has been coding for over 5 years, and is the founder of the startup InSight3D, which is centered around Web3, building solutions for both individuals and companies. He is involved with numerous projects in the Web3 space, with the most recent and ambitious one being MyCoin. Along with being a serial entrepreneur and developer, Neil is also a tutor teacher for many students, and is currently employed at Code Ninja’s alongside his startups.  
+  
+Sergey Belyaev  
+Linkedin: https://www.linkedin.com/in/sergey-belyaev-aa7401b3/  
+GitHub: https://github.com/sbelka-1703  
+  
 Sergey Belyaev is a certified Medical Lab Technologist within the HonorHealth network.
 He also has been in the crypto space since 2017 and shares the same values as the Ethereum Foundation and has deep knowledge of the web3 ecosystem. Since January 2021, he has been actively pursuing Front End Development & Blockchain Programming with the ultimate goal of working in the space full-time. Sergey’s drive to learn has yielded 8 different certifications from Moralis (Previously Ivan on Tech), and he has shown his extensive knowledge in building small scale applications using NextJS and Solidity.
 
-### Help/Support
-Email: neil@insight3d.tech
-Website: https://mycoin.insight3d.tech
+### Help/Support  
+Email: neil@insight3d.tech  
+Website: https://mycoin.insight3d.tech  

@@ -20,25 +20,25 @@ export default function Dashboard() {
                 <meta property="og:site_name" content="MyCoin by InSight3D" />
                 <meta name="twitter:image:alt" content="MyCoin" />
             </Head>
-            <div className=' h-full '>
-            <div className='flex flex-col mb-80'>
-            <div className='flex relative h-10 mb-[450px]'>
-                {/* Text and input field */}
-                <div className=' relative ml-52 space-y-8 mt-28'>
-                <p className='text-4xl font-extrabold w-[560px]'>Account Info</p>
-                <p>User Email: {user.email}</p>
-                <p>User Name: {user.name}</p>
-                <p>User Signup: {user.updated_at}</p>
+            <div className='flex items-left justify-center'>
+                <div className='bg-white w-1/3 mt-10 rounded-lg shadow-2xl hover:bg-gray-200'>
+                    <div className='flex items-center justify-center pt-10 flex-col'>
+                        <Image src={user.picture} width="269" height="272" alt="logo" className="rounded-full w-32"/>
+                        <br>
+                        </br>
+                        <p className='text-4xl font-extrabold w-full text-center'>MyCoin</p>
+                        <p className='text-2xl font-extrabold w-full text-center'>Welcome {user.name}!</p>
+                        <br>
+                        </br>
+                    </div>
                 </div>
 
-                {/* Logo */}    
-                <div className='absolute right-0 pr-52 mt-[85px]'>
-                <Image src={user.picture} width="269" height="272" alt="logo" />
+            </div>
+            
+            <br>
+            </br>
 
-                </div>
-            </div>
-            </div>
-        </div>
+
         </>
         )
     )

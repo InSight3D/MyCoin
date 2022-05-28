@@ -29,7 +29,7 @@ function login() {
 function Navigation() {
   return (
     /* navbar */
-    <header className='ml-24 mr-24'>
+    <header className='mr-24 '>
       <div className="px-4 mx-auto mt-3 ">
         <div className='flex justify-between '>
 
@@ -37,9 +37,11 @@ function Navigation() {
           <div className='flex space-x-4 '>
             <Link href="/" passHref>
               <div className='flex space-x-2 cursor-pointer'>
-                <Image src="/logo.svg" width="80" height="50" alt="Logo" />
-                <a className='flex items-center px-2 py-5'>
-                  <span className='text-4xl font-extrabold'>MyCoin</span>
+                <div className='flex items-center'>
+                  <img className=' min-h-[100px] min-w-[100px] lg:h-[50px] lg:w-[50px]' src="/logo.svg" w alt="logo" />
+                </div>
+                <a className='flex items-center py-5'>
+                  <span className='text-6xl font-extrabold md:text-4xl md:'>MyCoin</span>
                 </a>
               </div>
             </Link>
@@ -65,24 +67,26 @@ function Navigation() {
           </div>
 
           {/* secondary nav */}
-          
-          <div className='flex items-center space-x-10 text-md'>
-            
-            <form className = "hidden md:block" action="/dashboard">
-              <button  type="submit" className='px-4 py-2 m-1 font-semibold rounded-2xl hover:bg-gray-200 btn btn-outline btn-accent'>
+
+          <div className='flex items-center justify-end space-x-10 text-md'>
+
+            <form className="hidden md:flex" action="/dashboard">
+              <button type="submit" className='px-4 py-2 m-1 font-semibold rounded-2xl hover:bg-gray-200 btn btn-outline btn-accent'>
                 Login
               </button>
             </form>
-            <form className = "hidden md:block" action="/dashboard">
+            <form className="hidden md:flex" action="/dashboard">
               <button type="submit" className='px-4 py-2 m-1 font-medium text-white bg-black btn btn-outline btn-accent hover:bg-gray-700 rounded-2xl '>
                 Get Started
               </button>
             </form>
+
+            <div className='flex items-center pr-6 pl-80 md:pl-0 '>
+              <GiHamburgerMenu className='w-16 h-16 md:hidden' />
+            </div>
           </div>
 
-          <div className='flex items-center '>
-               <GiHamburgerMenu className='w-10 h-10 ml-96 md:hidden'/>
-          </div>
+
         </div>
       </div>
     </header>

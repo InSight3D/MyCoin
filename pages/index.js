@@ -62,7 +62,7 @@ export default function Home() {
         <div className='flex flex-col mb-80'>
           <div className='flex  justify-around h-10 mb-[450px]'>
             {/* Text and input field */}
-            <div className='relative space-y-8 ml-52 mt-28'>
+            <div className='relative space-y-8 ml-96 md:ml-52 mt-28'>
               <p className='text-8xl font-extrabold w-[560px]'>MyCoin by InSight3D</p>
               <p className='text-2xl'>The worlds first free to use mock Crypto Exchange with <br/>Academy and Supportive Community.</p>
               <form className='flex items-center' action='/api/auth/login'>
@@ -81,8 +81,8 @@ export default function Home() {
             </div>
 
             {/* Logo */}
-            <div>
-              <img className=' h-[269px] w-[272px] lg:h-[500px] lg:w-[500px]' src="/logo.svg" w alt="logo" />
+            <div className='hidden md:block'>
+              <img className='  h-[269px] w-[272px] lg:h-[500px] lg:w-[500px]' src="/logo.svg" w alt="logo" />
             </div>
           </div>
 
@@ -118,7 +118,7 @@ export default function Home() {
             </div>
           </div>
           {/* Grid */}
-          <div className='mt-[228px] flex justify-center'>
+          <div className='mt-[228px] ml-40 md:ml-0 flex justify-center items-center'>
             <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-52'>
               <div className='h-[514px] w-[454px] '>
                 <section id='academy'>

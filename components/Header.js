@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { GiHamburgerMenu } from "react-icons/gi";
 
 
+
 function login() {
   axios.post('http://localhost:5000/login', {
     email: 'neil@insight3d.tech',
@@ -29,7 +30,7 @@ function login() {
 function Navigation() {
   return (
     /* navbar */
-    <header className='mr-24 '>
+    <header className='flex justify-between mr-24 md:block '>
       <div className="px-4 mx-auto mt-3 ">
         <div className='flex justify-between '>
 
@@ -69,27 +70,52 @@ function Navigation() {
           {/* secondary nav */}
 
           <div className='flex items-center justify-end space-x-10 text-md'>
-
-            <form className="hidden md:flex" action="/dashboard">
-              <button type="submit" className='px-4 py-2 m-1 font-semibold rounded-2xl hover:bg-gray-200 btn btn-outline btn-accent'>
+            <form className="hidden text-black md:flex" action="/dashboard">
+              <button type="submit" className='px-4 py-2 m-1 font-semibold text-black rounded-2xl hover:bg-gray-300 '>
                 Login
               </button>
             </form>
             <form className="hidden md:flex" action="/dashboard">
-              <button type="submit" className='px-4 py-2 m-1 font-medium text-white bg-black btn btn-outline btn-accent hover:bg-gray-700 rounded-2xl '>
+              <button type="submit" className='px-4 py-2 m-1 font-medium text-white bg-black hover:bg-gray-700 rounded-2xl '>
                 Get Started
               </button>
             </form>
-
-            <div className='flex items-center pr-6 pl-80 md:pl-0 '>
-              <GiHamburgerMenu className='w-16 h-16 md:hidden' />
-            </div>
           </div>
+        </div>
 
 
+
+
+      </div>
+      {/* Mobile Menu */}
+      <div className='flex justify-end ml-[400px] w-96'>
+        <div class="w-fit h-fit  flex flex-col justify-end md:hidden p-6">
+          <div class="dropdown dropdown-end text-4xl">
+            <label tabindex="0">
+              <GiHamburgerMenu className='w-16 h-16 md:hidden' />
+            </label>
+            <ul tabindex="0" class="dropdown-content space-y-6 menu p-4  shadow bg-base-100 rounded-box w-fit h-fit">
+              <Link href="#academy" smooth={true} passHref>
+                <span className='span'>Academy</span>
+              </Link>
+              <Link href="#trading" smooth={true} passHref>
+                <span className='span'>Trading</span>
+              </Link>
+              <Link href="#community" smooth={true} passHref>
+                <span className='span'>Community</span>
+              </Link>
+              <div class="divider"></div>
+              <Link type="submit" className="hidden md:flex" href="/dashboard">
+                <span >Login</span>
+              </Link>
+              <Link type="submit" className="hidden md:flex" href="/dashboard">
+                <span >Get Started</span>
+              </Link>
+            </ul>
+          </div>
         </div>
       </div>
-    </header>
+    </header >
 
   );
 }

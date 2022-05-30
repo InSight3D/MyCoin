@@ -89,12 +89,12 @@ function Navigation() {
       </div>
       {/* Mobile Menu */}
       <div className='flex justify-end ml-[400px] w-96'>
-        <div class="w-fit h-fit  flex flex-col justify-end md:hidden p-6">
-          <div class="dropdown dropdown-end text-4xl">
-            <label tabindex="0">
+        <div className="w-fit h-fit  flex flex-col justify-end md:hidden p-6">
+          <div className="dropdown dropdown-end text-4xl">
+            <label tabIndex="0">
               <GiHamburgerMenu className='w-16 h-16 md:hidden' />
             </label>
-            <ul tabindex="0" class="dropdown-content space-y-6 menu p-4  shadow bg-base-100 rounded-box w-fit h-fit">
+            <ul tabIndex="0" className="dropdown-content space-y-6 menu p-4  shadow bg-base-100 rounded-box w-fit h-fit">
               <Link href="#academy" smooth={true} passHref>
                 <span className='span'>Academy</span>
               </Link>
@@ -104,7 +104,7 @@ function Navigation() {
               <Link href="#community" smooth={true} passHref>
                 <span className='span'>Community</span>
               </Link>
-              <div class="divider"></div>
+              <div className="divider"></div>
               <Link type="submit" className="hidden md:flex" href="/dashboard">
                 <span >Login</span>
               </Link>

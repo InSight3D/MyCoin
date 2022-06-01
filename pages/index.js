@@ -90,12 +90,12 @@ export default function Home() {
 
         {/* Light Blue section */}
         <div>
-          <div className='relative w-full h-96  bg-[#80E8EC]'>
-            <div className='pt-20 text-5xl font-extrabold text-center'>
+          <div className='  md:ml-0 mb-10 h-full md:relative md:w-full md:h-96 bg-none  md:bg-[#80E8EC]'>
+            <div className='pt-20 text-5xl font-extrabold text-center mb-none md:mb-6'>
               <p>MyCoin Ecosystem</p>
             </div>
-            <div className="absolute left-0 right-0 bottom-[-55px] flex items-center justify-center">
-              <div className="grid grid-cols-3 gap-36">
+            <div className=" block md:absolute left-0 right-0 bottom-[-55px] md:flex items-center justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-36 ">
                 <div className="flex flex-col items-center px-20 py-6 text-lg font-bold text-center text-white bg-white max-h-60 space-y-7 rounded-3xl drop-shadow-lg">
                   <FaSchool className='text-black text-[150px]' />
                   <Link to="academy" smooth={true} offset={-150}>
@@ -117,6 +117,8 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+
           {/* Grid */}
           <div className='mt-[228px] ml-40 md:ml-0 flex justify-center items-center'>
             <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-52'>

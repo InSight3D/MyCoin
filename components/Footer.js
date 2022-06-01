@@ -8,10 +8,10 @@ import { FaDiscord } from 'react-icons/fa'
 const Footer = () => {
   return (
     <>
-      <footer className=' flex justify-center space-y-6 flex-col w-full h-[300px] bg-gray-300'>
+      <footer className=' flex justify-center space-y-6 flex-col w-[1000px] md:w-full h-[300px] bg-gray-300'>
 
         {/* Logo and description */}
-        <div className=' flex flex-col my-1  justify-center items-center'>
+        <div className='flex flex-col items-center justify-center my-1 '>
           <p className='font-extrabold'>My Coin</p>
           <Image src="/logo.svg" width="80" height="50" alt="logo" />
           <div>
@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Links   */}
-        <div className='space-x-6 flex justify-center items-center font-medium'>
+        <div className='flex items-center justify-center space-x-6 font-medium'>
           <Link href='/signup'>
             <a className='hover:text-pink-600'>Sign Up</a>
           </Link>
@@ -40,15 +40,15 @@ const Footer = () => {
         </div>
 
          {/* Soical media Icons   */}
-        <div className='flex space-x-6 justify-center '>
+        <div className='flex justify-center space-x-6 '>
           <a href='https://github.com/insight3d/mycoin'>
-            <AiFillGithub className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+            <AiFillGithub className="w-8 h-8 text-white cursor-pointer hover:text-gray-500" />
           </a>
           <a href="mailto://neil@insight3d.tech">
-            <AiFillMail className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+            <AiFillMail className="w-8 h-8 text-white cursor-pointer hover:text-gray-500" />
           </a>
           <a href="https://discord.gg/mycoin">
-            <FaDiscord className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
+            <FaDiscord className="w-8 h-8 text-white cursor-pointer hover:text-gray-500" />
           </a>
         </div>
       </footer>

@@ -33,6 +33,11 @@ export default function dashboard() {
                 </div>
             </div>
             </div>
+            <div id="chartDiv" style="width:50%; height:300px; margin:0 auto;"></div>
+
+            
+            <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
+            
         </div>
         </>
     )

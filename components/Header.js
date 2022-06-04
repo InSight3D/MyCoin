@@ -94,7 +94,7 @@ function Navigation() {
             <label tabIndex="0">
               <GiHamburgerMenu className='w-16 h-16 md:hidden' />
             </label>
-            <ul tabIndex="0" className="dropdown-content space-y-6 float-left menu p-4 bg-white shadow rounded-lg shadow-2xl w-fit h-fit mt-1 m-0">
+            <ul tabIndex="0" className="dropdown-content space-y-6 float-left menu p-4 bg-gray-100 shadow rounded-lg shadow-2xl w-fit h-fit mt-1 m-0">
               <Link href="#academy" smooth={true} passHref>
                 <span className='span hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Academy</span>
               </Link>

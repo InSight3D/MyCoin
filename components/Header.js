@@ -88,7 +88,7 @@ function Navigation() {
 
       </div>
       {/* Mobile Menu */}
-      <div className='flex justify-end ml-[400px] w-96'>
+      <div className='flex justify-end ml-[500px] w-96'>
         <div className="w-fit h-fit  flex flex-col justify-end md:hidden p-6">
           <div className="dropdown dropdown-end text-4xl">
             <label tabIndex="0">

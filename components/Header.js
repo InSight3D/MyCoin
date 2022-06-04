@@ -105,10 +105,10 @@ function Navigation() {
                 <span className='span hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Community</span>
               </Link>
               <div className="divider"></div>
-              <Link type="submit" className="hidden md:flex " href="/dashboard">
+              <Link type="submit" className="hidden md:flex " href="/dashboard" passHref>
                 <span className='hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Login</span>
               </Link>
-              <Link type="submit" className="hidden md:flex" href="/dashboard">
+              <Link type="submit" className="hidden md:flex" href="/dashboard" passHref>
                 <span className='hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Get Started</span>
               </Link>
             </ul>

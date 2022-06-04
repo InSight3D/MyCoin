@@ -88,28 +88,28 @@ function Navigation() {
 
       </div>
       {/* Mobile Menu */}
-      <div className='flex justify-end ml-[400px] w-96'>
+      <div className='flex justify-end ml-[500px] w-96'>
         <div className="w-fit h-fit  flex flex-col justify-end md:hidden p-6">
           <div className="dropdown dropdown-end text-4xl">
             <label tabIndex="0">
               <GiHamburgerMenu className='w-16 h-16 md:hidden' />
             </label>
-            <ul tabIndex="0" className="dropdown-content space-y-6 menu p-4  shadow bg-base-100 rounded-box w-fit h-fit">
+            <ul tabIndex="0" className="dropdown-content space-y-6 float-left menu p-4 bg-gray-100 shadow rounded-lg shadow-2xl w-fit h-fit mt-1 m-0">
               <Link href="#academy" smooth={true} passHref>
-                <span className='span'>Academy</span>
+                <span className='span hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Academy</span>
               </Link>
               <Link href="#trading" smooth={true} passHref>
-                <span className='span'>Trading</span>
+                <span className='span hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Trading</span>
               </Link>
               <Link href="#community" smooth={true} passHref>
-                <span className='span'>Community</span>
+                <span className='span hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Community</span>
               </Link>
               <div className="divider"></div>
-              <Link type="submit" className="hidden md:flex" href="/dashboard">
-                <span >Login</span>
+              <Link type="submit" className="hidden md:flex " href="/dashboard">
+                <span className='hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Login</span>
               </Link>
               <Link type="submit" className="hidden md:flex" href="/dashboard">
-                <span >Get Started</span>
+                <span className='hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Get Started</span>
               </Link>
             </ul>
           </div>

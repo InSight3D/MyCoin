@@ -36,6 +36,9 @@ const Footer = () => {
           <Link href='/academy'>
             <a className='hover:text-pink-600'>MyCoin Academy</a>
           </Link>
+          <Link href='https://netlify.com'>
+            <a className='hover:text-pink-600'>Netlify Host</a>
+          </Link>
         </div>
 
          {/* Soical media Icons   */}
@@ -49,6 +52,11 @@ const Footer = () => {
           <a href="https://discord.gg/mycoin">
             <FaDiscord className="w-8 h-8 text-white cursor-pointer hover:text-gray-500" />
           </a>
+        </div>
+        <div className='flex justify-center space-x-6 '>
+          <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a>
+        </div>
+        <div className='flex justify-center space-x-6 '>
         </div>
       </footer>
     </>

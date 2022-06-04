@@ -39,7 +39,7 @@ function Navigation() {
             <Link href="/" passHref>
               <div className='flex space-x-2 cursor-pointer'>
                 <div className='flex items-center'>
-                  <Image className=' min-h-[100px] min-w-[100px] lg:h-[50px] lg:w-[50px]' src="/logo.svg" w alt="logo" />
+                  <img className=' min-h-[100px] min-w-[100px] lg:h-[50px] lg:w-[50px]' src="/logo.svg" w alt="logo" />
                 </div>
                 <a className='flex items-center py-5'>
                   <span className='text-6xl font-extrabold md:text-4xl md:'>MyCoin</span>

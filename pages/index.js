@@ -82,7 +82,7 @@ export default function Home() {
 
             {/* Logo */}
             <div className='hidden md:block'>
-              <Image className='h-[269px] w-[272px] lg:h-[500px] lg:w-[500px]' src="/logo.svg" w alt="logo" />
+              <img className='h-[269px] w-[272px] lg:h-[500px] lg:w-[500px]' src="/logo.svg" w alt="logo" />
             </div>
           </div>
 

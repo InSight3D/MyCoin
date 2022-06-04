@@ -160,8 +160,15 @@ export default function Home() {
                     </div>
                   </section>
                 </div>
-              <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'></div>
-              <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'></div>
+
+              <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'>
+                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/academy.png' />
+              </div>
+
+              <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'>
+                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/trading.png' />
+              </div>
+
               <div className='h-[514px] w-[454px]'>
                 <section id='trading'>
                   <div>
@@ -237,7 +244,9 @@ export default function Home() {
                   </div>
                 </section>
               </div>
-              <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'></div>
+              <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'>
+                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/community.png' />
+              </div>
             </div>
           </div>
           <form action='/dashboard'>

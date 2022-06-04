@@ -8,7 +8,7 @@ import { FaDiscord } from 'react-icons/fa'
 const Footer = () => {
   return (
     <>
-      <footer className=' flex justify-center space-y-6 flex-col w-[1000px] md:w-full h-[300px] bg-gray-300'>
+      <footer className=' flex justify-center space-y-6 flex-col w-[1000px] md:w-full h-[350px] bg-gray-300'>
 
         {/* Logo and description */}
         <div className='flex flex-col items-center justify-center my-1 '>
@@ -53,6 +53,11 @@ const Footer = () => {
           <a href="https://discord.gg/mycoin">
             <FaDiscord className="w-8 h-8 text-white cursor-pointer hover:text-gray-500" />
           </a>
+        </div>
+        <div className='flex justify-center space-x-6 '>
+          <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a>
+        </div>
+        <div className='flex justify-center space-x-6 '>
         </div>
       </footer>
     </>

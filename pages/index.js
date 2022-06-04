@@ -82,7 +82,7 @@ export default function Home() {
 
             {/* Logo */}
             <div className='hidden md:block'>
-              <img className='  h-[269px] w-[272px] lg:h-[500px] lg:w-[500px]' src="/logo.svg" w alt="logo" />
+              <Image className='h-[269px] w-[272px] lg:h-[500px] lg:w-[500px]' src="/logo.svg" w alt="logo" />
             </div>
           </div>
 
@@ -162,11 +162,11 @@ export default function Home() {
                 </div>
 
               <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'>
-                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/academy.png' />
+                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/academy.png' alt=""/>
               </div>
 
               <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'>
-                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/trading.png' />
+                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/trading.png' alt=""/>
               </div>
 
               <div className='h-[514px] w-[454px]'>
@@ -245,7 +245,7 @@ export default function Home() {
                 </section>
               </div>
               <div className='h-[514px] w-[454px] bg-gray-400 rounded-3xl'>
-                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/community.png' />
+                <Image className='h-[514px] w-[454px] bg-gray-400 rounded-3xl' width={454} height={514} src='/homepage/community.png' alt=""/>
               </div>
             </div>
           </div>

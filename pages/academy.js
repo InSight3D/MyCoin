@@ -22,7 +22,7 @@ export default function dashboard() {
             <div className="flex justify-auto">
             <div className="rounded-lg shadow-lg bg-white max-w-sm">
                 <a href="#!">
-                <img className="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
+                <Image className="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt=""/>
                 </a>
                 <div className="p-6">
                 <h5 className="text-gray-900 text-xl font-medium mb-2">Card title</h5>

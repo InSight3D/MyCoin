@@ -55,7 +55,7 @@ const Footer = () => {
           </a>
         </div>
         <div className='flex justify-center space-x-6 '>
-          <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a>
+          <a href="https://www.netlify.com"> <Image src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a>
         </div>
         <div className='flex justify-center space-x-6 '>
         </div>

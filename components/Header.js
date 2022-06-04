@@ -39,7 +39,7 @@ function Navigation() {
             <Link href="/" passHref>
               <div className='flex space-x-2 cursor-pointer'>
                 <div className='flex items-center'>
-                  <img className=' min-h-[100px] min-w-[100px] lg:h-[50px] lg:w-[50px]' src="/logo.svg" w alt="logo" />
+                  <Image className=' min-h-[100px] min-w-[100px] lg:h-[50px] lg:w-[50px]' src="/logo.svg" w alt="logo" />
                 </div>
                 <a className='flex items-center py-5'>
                   <span className='text-6xl font-extrabold md:text-4xl md:'>MyCoin</span>
@@ -105,10 +105,10 @@ function Navigation() {
                 <span className='span hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Community</span>
               </Link>
               <div className="divider"></div>
-              <Link type="submit" className="hidden md:flex " href="/dashboard">
+              <Link type="submit" className="hidden md:flex " href="/dashboard" passHref>
                 <span className='hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Login</span>
               </Link>
-              <Link type="submit" className="hidden md:flex" href="/dashboard">
+              <Link type="submit" className="hidden md:flex" href="/dashboard" passHref>
                 <span className='hover:bg-gray-100 text-gray-700 whitespace-nowrap bg-transparent dropdown-item rounded-lg'>Get Started</span>
               </Link>
             </ul>

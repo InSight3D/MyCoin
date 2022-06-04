@@ -1,14 +1,13 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
-import { DotsCircleHorizontalIcon, MailIcon, CodeIcon, ChatIcon, LockClosedIcon } from '@heroicons/react/solid'
 import { AiFillGithub, AiFillMail  } from 'react-icons/ai'
 import { FaDiscord } from 'react-icons/fa'
 
 const Footer = () => {
   return (
     <>
-      <footer className=' flex justify-center space-y-6 flex-col w-[1000px] md:w-full h-[300px] bg-gray-300'>
+      <footer className=' flex justify-center space-y-6 flex-col w-[900px] md:w-full h-[300px] bg-gray-300'>
 
         {/* Logo and description */}
         <div className='flex flex-col items-center justify-center my-1 '>

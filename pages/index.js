@@ -60,7 +60,7 @@ export default function Home() {
 
       <div className='h-full '>
         <div className='flex flex-col mb-80'>
-          <div className='flex  justify-around h-10 mb-[450px]'>
+          <div className='flex  justify-around h-10 md:mb-[450px] mb-72'>
             {/* Text and input field */}
             <div className='relative space-y-8 ml-96 md:ml-52 mt-28'>
               <p className='text-8xl font-extrabold w-[560px]'>MyCoin by InSight3D</p>
@@ -89,26 +89,26 @@ export default function Home() {
         </div>
 
         {/* Light Blue section */}
-        <div>
+        <div >
           <div className='  md:ml-0 mb-10 h-full md:relative md:w-full md:h-96 bg-none  md:bg-[#80E8EC]'>
-            <div className='pt-20 text-5xl font-extrabold text-center mb-none md:mb-6'>
+            <div className='hidden md:block ml-[245px] md:ml-0 justify-center min-h-fit pt-20 md:text-5xl text-3xl font-extrabold text-center mb-none md:mb-6'>
               <p>MyCoin Ecosystem</p>
             </div>
-            <div className=" block md:absolute left-0 right-0 bottom-[-55px] md:flex items-center justify-center">
+            <div className=" hidden md:absolute left-0 right-0 bottom-[-55px] md:flex items-center justify-center">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-36 ">
-                <div className="flex flex-col items-center px-20 py-6 text-lg font-bold text-center text-white bg-white max-h-60 space-y-7 rounded-3xl drop-shadow-lg">
+                <div className="flex flex-col items-center px-20 py-6 text-lg font-bold text-center text-white bg-white min-h-60 space-y-7 rounded-3xl drop-shadow-lg">
                   <FaSchool className='text-black text-[150px]' />
                   <Link to="academy" smooth={true} offset={-150}>
                     <PurpleButton />
                   </Link>
                 </div>
-                <div className="flex flex-col items-center justify-between text-lg font-bold text-center text-white bg-white max-h-60 rounded-3xl drop-shadow-lg">
+                <div className="flex flex-col items-center justify-between text-lg font-bold text-center text-white bg-white min-h-60 rounded-3xl drop-shadow-lg">
                   <BsCoin className='text-black text-[100px] mt-10 ' />
                   <Link className='mb-6' to="trading" smooth={true} offset={-150}>
                     <PurpleButton  />
                   </Link>    
                 </div>
-                <div className="flex flex-col items-center justify-between text-lg font-bold text-center text-white bg-white h-60 rounded-3xl drop-shadow-lg">
+                <div className="flex flex-col items-center justify-between text-lg font-bold text-center text-white bg-white min-h-60 rounded-3xl drop-shadow-lg">
                   <FaEthereum className='text-black text-[100px] mt-10 ' />
                   <Link className= "mb-6" to='community' smooth={true} offset={-150}>
                     <PurpleButton className="mt-[100px]" />
@@ -118,9 +118,13 @@ export default function Home() {
             </div>
           </div>
 
+          {/* <div className='flex md:hidden items-center text-center justify-center min-w-full m-auto text-8xl px-[40px] font-bold bg-[#80E8EC]'>
+            <p>MyCoin Ecosystem</p>
+          </div> */}
+
 
           {/* Grid */}
-          <div className='mt-[228px] ml-40 md:ml-0 flex justify-center items-center'>
+          <div className='mt-[228px] ml-[245px] md:ml-0 flex justify-center items-center'>
             <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-52'>
               <div className='h-[514px] w-[454px] '>
                 <section id='academy'>
@@ -251,13 +255,13 @@ export default function Home() {
           </div>
           <form action='/dashboard'>
             <div className='flex items-center justify-center'>
-              <div className='flex flex-col items-center p-8 mt-32 mb-10 bg-gray-400 md:flex-row md:ml-0 md:w-7xl rounded-3xl'>
-                <div className='relative flex items-center text-gray-600 drop-shadow-lg focus-within:text-gray-900'>
+              <div className='flex flex-col items-center p-8 mt-32 mb-10 bg-gray-400 ml-[600px] md:flex-row md:ml-0 md:w-7xl rounded-3xl'>
+                <div className='relative items-center hidden text-gray-600 md:flex drop-shadow-lg focus-within:text-gray-900'>
                   <MailIcon className="absolute w-20 h-20 pl-2 pointer-events-none text-grey-400" />
                   <input className=' md:h-[80px] md:w-[800px] h-[80px] w-[450px] rounded-2xl pl-20 pr-6 font-semibold border-none ring-2 ring-gray-200 text-4xl'></input>
                 </div>
                 <div>
-                  <button className='bg-black h-[80px] w-72 right-[146px] rounded-2xl p-[13px] ml-2'>
+                  <button className='bg-black h-[80px] md:w-72 w-[600px] right-[146px] rounded-2xl p-[13px] ml-2'>
                     <span className='text-white text-[15px] font-extrabold'>
                       Get Started Today!
                     </span>

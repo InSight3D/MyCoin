@@ -242,10 +242,10 @@ export default function Home() {
           </div>
           <form action='/dashboard'>
             <div className='flex items-center justify-center'>
-              <div className='flex items-center p-8 mt-32 mb-10 bg-gray-400 w-7xl rounded-3xl'>
+              <div className='flex flex-col items-center p-8 mt-32 mb-10 bg-gray-400 md:flex-row md:ml-0 md:w-7xl rounded-3xl'>
                 <div className='relative flex items-center text-gray-600 drop-shadow-lg focus-within:text-gray-900'>
                   <MailIcon className="absolute w-20 h-20 pl-2 pointer-events-none text-grey-400" />
-                  <input className=' h-[80px] w-[800px] rounded-2xl pl-20 pr-6 font-semibold border-none ring-2 ring-gray-200 text-4xl'></input>
+                  <input className=' md:h-[80px] md:w-[800px] h-[80px] w-[450px] rounded-2xl pl-20 pr-6 font-semibold border-none ring-2 ring-gray-200 text-4xl'></input>
                 </div>
                 <div>
                   <button className='bg-black h-[80px] w-72 right-[146px] rounded-2xl p-[13px] ml-2'>

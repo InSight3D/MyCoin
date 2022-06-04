@@ -37,6 +37,9 @@ const Footer = () => {
           <Link href='/academy'>
             <a className='hover:text-pink-600'>MyCoin Academy</a>
           </Link>
+          <Link href='https://netlify.com'>
+            <a className='hover:text-pink-600'>Netlify Host</a>
+          </Link>
         </div>
 
          {/* Soical media Icons   */}

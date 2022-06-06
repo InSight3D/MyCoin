@@ -102,7 +102,7 @@ function Navigation() {
             </label>
             <ul
               tabIndex="0"
-              className="float-left p-4 m-0 mt-1 space-y-6 bg-gray-100 rounded-lg shadow shadow-2xl dropdown-content menu w-fit h-fit"
+              className="float-left p-20 m-0 mt-1 space-y-16 bg-gray-100 rounded-lg shadow-2xl text-7xl dropdown-content menu w-fit h-fit"
             >
               <Link href="#academy" smooth={true} passHref>
                 <span className="text-gray-700 bg-transparent rounded-lg span hover:bg-gray-100 whitespace-nowrap dropdown-item">

@@ -147,48 +147,55 @@ export default function Home() {
 
           {/* Grid */}
           <div className="mt-[228px] ml-[245px] md:ml-0 flex justify-center items-center">
-            <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-52">
+            <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-[1100px] md:gap-y-52">
               <div className="h-[514px] w-[454px] ">
                 <section id="academy">
                   <div>
                     <div className="flex items-center space-x-6">
-                      <FaSchool className="text-black text-[110px]" />
-                      <h1 className="text-4xl font-bold">MyCoin Academy </h1>
+                      <FaSchool className="text-black md:text-[110px] text-[310px]" />
+                      <h1 className="text-6xl font-bold md:text-4xl">
+                        MyCoin Academy{" "}
+                      </h1>
                     </div>
                     <br />
-                    <p>
-                      MyCoin Academy offers both a free and paid plan. Free
-                      users gain accsess to introductory courses aiming to
-                      increse increase awareness, safety, and competency in the
-                      Web3 space. The paid plan unlocks more advaced courses
-                      such as Ethereum Development, Trading Strategies, as well
-                      as live events such as prensentations and expert panels to
-                      help you learn more about the Web3 ecosystem. After
-                      completing any course users will get a certificate of
-                      completion, and paid users will also receve an NFT
-                      corosponding to the course they finished.
-                    </p>
-                    <h1 className="mt-4 mb-2 font-bold">Features</h1>
-                    <div className="grid grid-cols-2 grid-rows-6 ml-8">
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Free & Paid Plan</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Web Based</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Course Certificates</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Live Events</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Trading & Development Courses</p>
+                    <div className="space-y-20 md:space-y-4">
+                      <p className="text-3xl md:text-base">
+                        MyCoin Academy offers both a free and paid plan. Free
+                        users gain accsess to introductory courses aiming to
+                        increse increase awareness, safety, and competency in
+                        the Web3 space. The paid plan unlocks more advaced
+                        courses such as Ethereum Development, Trading
+                        Strategies, as well as live events such as
+                        prensentations and expert panels to help you learn more
+                        about the Web3 ecosystem. After completing any course
+                        users will get a certificate of completion, and paid
+                        users will also receve an NFT corosponding to the course
+                        they finished.
+                      </p>
+                      <h1 className="mt-4 mb-2 text-5xl font-bold md:text-base">
+                        Features
+                      </h1>
+                      <div className="grid grid-cols-2 grid-rows-6 ml-8 text-3xl md:text-base">
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Free & Paid Plan</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Web Based</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Course Certificates</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Live Events</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Trading & Development Courses</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -219,39 +226,45 @@ export default function Home() {
                 <section id="trading">
                   <div>
                     <div className="flex items-center space-x-6">
-                      <BsCoin className="text-black text-[100px] " />
-                      <h1 className="text-4xl font-bold">MyCoin Trading </h1>
+                      <BsCoin className="text-black md:text-[110px] text-[310px] " />
+                      <h1 className="text-6xl font-bold md:text-4xl">
+                        MyCoin Trading{" "}
+                      </h1>
                     </div>
                     <br />
-                    <p>
-                      MyCoin Trading will alow users to simulate trading using
-                      the skills aquired in the MyCoin Academy, or just for fun.
-                      Paid users will gain accsess to over 500 coins, and free
-                      users will gain accsess to the top 100 coins. Paid users
-                      will also be able to accses the paid courses in the
-                      Academy, and an ad free version for MyCoin.
-                    </p>
-                    <h1 className="mt-4 mb-2 font-bold">Features</h1>
-                    <div className="grid grid-cols-2 grid-rows-6 ml-8">
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Free & Paid Plan</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Mock Trading</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Trading Community</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Accsess to Academy</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Over 100 Cryptocurrencies</p>
+                    <div className="space-y-12 md:space-y-4">
+                      <p className="text-3xl md:text-base">
+                        MyCoin Trading will alow users to simulate trading using
+                        the skills aquired in the MyCoin Academy, or just for
+                        fun. Paid users will gain accsess to over 500 coins, and
+                        free users will gain accsess to the top 100 coins. Paid
+                        users will also be able to accses the paid courses in
+                        the Academy, and an ad free version for MyCoin.
+                      </p>
+                      <h1 className="mt-4 mb-2 text-5xl font-bold md:text-base">
+                        Features
+                      </h1>
+                      <div className="grid grid-cols-2 grid-rows-6 ml-8 text-3xl md:text-base">
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Free & Paid Plan</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Mock Trading</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Trading Community</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Accsess to Academy</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Over 100 Cryptocurrencies</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -261,41 +274,47 @@ export default function Home() {
                 <section id="community">
                   <div>
                     <div className="flex items-center space-x-6">
-                      <CgCommunity className="text-black text-[110px]" />
-                      <h1 className="text-4xl font-bold">MyCoin Community </h1>
+                      <CgCommunity className="text-black md:text-[110px] text-[510px]" />
+                      <h1 className="text-6xl font-bold md:text-4xl">
+                        MyCoin Community{" "}
+                      </h1>
                     </div>
                     <br />
-                    <p>
-                      The MyCoin Community will be accsesable to all users of
-                      MyCoin. MyCoin will host live events such as workshops,
-                      expert panels, and prensentations. Along with events,
-                      members will have accsess to support and community chats
-                      where they can ask questions, and get help from other
-                      members. Paid user will also have accsess to the Premium
-                      Community, where there will be Paid Member only events and
-                      chats, along with private tutoring sessions.
-                    </p>
-                    <h1 className="mt-4 mb-2 font-bold">Features</h1>
-                    <div className="grid grid-cols-2 grid-rows-6 ml-8">
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Community Chats</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Live Events</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Community Forums</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Private Tutoring</p>
-                      </div>
-                      <div className="flex">
-                        <BsCheckLg className="mr-1 text-green-400" />
-                        <p>Free and Paid Communities</p>
+                    <div className="space-y-12 md:space-y-4">
+                      <p className="text-3xl md:text-base">
+                        The MyCoin Community will be accsesable to all users of
+                        MyCoin. MyCoin will host live events such as workshops,
+                        expert panels, and prensentations. Along with events,
+                        members will have accsess to support and community chats
+                        where they can ask questions, and get help from other
+                        members. Paid user will also have accsess to the Premium
+                        Community, where there will be Paid Member only events
+                        and chats, along with private tutoring sessions.
+                      </p>
+                      <h1 className="mt-4 mb-2 text-5xl font-bold md:text-base">
+                        Features
+                      </h1>
+                      <div className="grid grid-cols-2 grid-rows-6 ml-8 text-3xl md:text-base">
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Community Chats</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Live Events</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Community Forums</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Private Tutoring</p>
+                        </div>
+                        <div className="flex">
+                          <BsCheckLg className="mr-1 text-green-400" />
+                          <p>Free and Paid Communities</p>
+                        </div>
                       </div>
                     </div>
                   </div>

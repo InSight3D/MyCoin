@@ -146,10 +146,10 @@ export default function Home() {
           </div> */}
 
           {/* Grid */}
-          <div className="mt-[228px] ml-[245px] md:ml-0 flex justify-center items-center">
+          <div className="mt-[228px] ml-[290px] md:ml-0 flex justify-center items-center">
             <div className="grid grid-cols-1 grid-rows-1 md:grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-[30px] md:gap-y-52">
               
-              <div className="h-fit w-[454px]  ">
+              <div className="h-fit w-[520px] md:w-[454px]  ">
                 <section id="academy">
                   <div>
                     <div className="flex items-center space-x-6">
@@ -176,7 +176,7 @@ export default function Home() {
                       <h1 className="mt-4 mb-2 text-5xl font-bold md:text-base">
                         Features
                       </h1>
-                      <div className="grid grid-cols-2 grid-rows-6 ml-8 text-3xl md:text-base">
+                      <div className="grid grid-cols-2 grid-rows-3 ml-8 text-2xl md:text-base">
                         <div className="flex">
                           <BsCheckLg className="mr-1 text-green-400" />
                           <p>Free & Paid Plan</p>
@@ -205,7 +205,7 @@ export default function Home() {
 
               <div className="h-fit w-[454px] rounded-3xl ">
                 <img
-                  className="h-[fit] w-[454px] rounded-3xl"
+                  className="h-fit w-[454px] rounded-3xl"
                   src="/homepage/academy.png"
                   alt=""
                 />
@@ -221,7 +221,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="h-fit w-[454px] ">
+              <div className="h-fit w-[520px] md:w-[454px] ">
                 <section id="trading">
                   <div>
                     <div className="flex items-center space-x-6">
@@ -243,7 +243,7 @@ export default function Home() {
                       <h1 className="mt-4 mb-2 text-5xl font-bold md:text-base">
                         Features
                       </h1>
-                      <div className="grid grid-cols-2 grid-rows-6 ml-8 text-3xl md:text-base">
+                      <div className="grid grid-cols-2 grid-rows-3 ml-8 text-3xl md:text-base">
                         <div className="flex">
                           <BsCheckLg className="mr-1 text-green-400" />
                           <p>Free & Paid Plan</p>
@@ -280,7 +280,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="h-fit w-[454px]">
+              <div className="h-fit w-[520px] md:w-[454px]">
                 <section id="community">
                   <div>
                     <div className="flex items-center space-x-6">
@@ -304,7 +304,7 @@ export default function Home() {
                       <h1 className="mt-4 mb-2 text-5xl font-bold md:text-base">
                         Features
                       </h1>
-                      <div className="grid grid-cols-2 grid-rows-6 ml-8 text-3xl md:text-base">
+                      <div className="grid grid-cols-2 grid-rows-3 ml-8 text-3xl md:text-base">
                         <div className="flex">
                           <BsCheckLg className="mr-1 text-green-400" />
                           <p>Community Chats</p>
@@ -333,7 +333,6 @@ export default function Home() {
               <div className="h-fit w-[454px] bg-gray-400 rounded-3xl">
                 <img
                   className="h-fit w-[454px] bg-gray-400 rounded-3xl"
-
                   src="/homepage/community.png"
                   alt=""
                 />

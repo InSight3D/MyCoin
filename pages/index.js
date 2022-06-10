@@ -103,11 +103,11 @@ export default function Home() {
 
         {/* Light Blue section */}
         <div>
-          <div className="  md:ml-0 mb-10 h-full md:relative md:w-full md:h-96 bg-none  md:bg-[#80E8EC]">
+          <div className="  md:ml-0 mb-10 h-full md:relative md:w-full md:h-96 bg-none  md:bg-[#80E8EC] ">
             <div className="hidden md:block ml-[245px] md:ml-0 justify-center min-h-fit pt-20 md:text-5xl text-3xl font-extrabold text-center mb-none md:mb-6">
               <p>MyCoin Ecosystem</p>
             </div>
-            <div className=" hidden md:absolute left-0 right-0 bottom-[-55px] md:flex items-center justify-center">
+            <div className=" hidden md:absolute left-0 right-0 bottom-[-55px] md:flex items-center justify-center ">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-36 ">
                 <div className="flex flex-col items-center px-20 py-6 text-lg font-bold text-center text-white bg-white min-h-60 space-y-7 rounded-3xl drop-shadow-lg">
                   <FaSchool className="text-black text-[150px]" />
@@ -147,8 +147,9 @@ export default function Home() {
 
           {/* Grid */}
           <div className="mt-[228px] ml-[245px] md:ml-0 flex justify-center items-center">
-            <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-[1100px] md:gap-y-52">
-              <div className="h-[514px] w-[454px] ">
+            <div className="grid grid-cols-1 grid-rows-1 md:grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-[30px] md:gap-y-52">
+              
+              <div className="h-fit w-[454px]  ">
                 <section id="academy">
                   <div>
                     <div className="flex items-center space-x-6">
@@ -202,19 +203,17 @@ export default function Home() {
                 </section>
               </div>
 
-              <div className="h-[514px] w-[454px] bg-gray-400 rounded-3xl">
-                <Image
-                  className="h-[514px] w-[454px] bg-gray-400 rounded-3xl"
-                  width={454}
-                  height={514}
+              <div className="h-fit w-[454px] rounded-3xl ">
+                <img
+                  className="h-[fit] w-[454px] rounded-3xl"
                   src="/homepage/academy.png"
                   alt=""
                 />
               </div>
 
-              <div className="h-[514px] w-[454px] bg-gray-400 rounded-3xl">
+              <div className=" hidden md:block h-fit w-[454px] bg-gray-400 border-4 rounded-3xl ">
                 <Image
-                  className="h-[514px] w-[454px] bg-gray-400 rounded-3xl"
+                  className="h-fit w-[454px] bg-gray-400 rounded-3xl"
                   width={454}
                   height={514}
                   src="/homepage/trading.png"
@@ -222,7 +221,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="h-[514px] w-[454px]">
+              <div className="h-fit w-[454px] ">
                 <section id="trading">
                   <div>
                     <div className="flex items-center space-x-6">
@@ -270,11 +269,22 @@ export default function Home() {
                   </div>
                 </section>
               </div>
-              <div className="h-[514px] w-[454px]">
+
+              <div className="md:hidden h-fit w-[454px] bg-gray-400 border-4 rounded-3xl ">
+                <Image
+                  className="h-fit w-[454px] bg-gray-400 rounded-3xl"
+                  width={454}
+                  height={514}
+                  src="/homepage/trading.png"
+                  alt=""
+                />
+              </div>
+
+              <div className="h-fit w-[454px]">
                 <section id="community">
                   <div>
                     <div className="flex items-center space-x-6">
-                      <CgCommunity className="text-black md:text-[110px] text-[510px]" />
+                      <CgCommunity className="text-black md:text-[110px] text-[210px]" />
                       <h1 className="text-6xl font-bold md:text-4xl">
                         MyCoin Community{" "}
                       </h1>
@@ -320,11 +330,10 @@ export default function Home() {
                   </div>
                 </section>
               </div>
-              <div className="h-[514px] w-[454px] bg-gray-400 rounded-3xl">
-                <Image
-                  className="h-[514px] w-[454px] bg-gray-400 rounded-3xl"
-                  width={454}
-                  height={514}
+              <div className="h-fit w-[454px] bg-gray-400 rounded-3xl">
+                <img
+                  className="h-fit w-[454px] bg-gray-400 rounded-3xl"
+
                   src="/homepage/community.png"
                   alt=""
                 />

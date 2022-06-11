@@ -62,12 +62,12 @@ export default function Home() {
         <link rel="icon" href="/logo.ico" />
       </Head>
 
-      <div className="h-full ">
+      <div className="h-full">
         <div className="flex flex-col mb-80">
           <div className="flex  justify-around h-10 md:mb-[450px] mb-72">
             {/* Text and input field */}
             <div className="relative space-y-8 ml-96 md:ml-52 mt-28">
-              <p className="text-8xl font-extrabold w-[560px]">
+              <p className="text-6xl font-extrabold w-[560px]">
                 MyCoin by InSight3D
               </p>
               <p className="text-2xl">
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
 
             {/* Logo */}
-            <div className="hidden md:block">
+            <div className="hidden md:block py-6">
               <img
                 className="h-[269px] w-[272px] lg:h-[500px] lg:w-[500px]"
                 src="/logo.svg"
@@ -149,7 +149,7 @@ export default function Home() {
           <div className="mt-[228px] ml-[290px] md:ml-0 flex justify-center items-center">
             <div className="grid grid-cols-1 grid-rows-1 md:grid-rows-2 md:grid-cols-2 gap-x-60 gap-y-[30px] md:gap-y-52">
               
-              <div className="h-fit w-[520px] md:w-[454px]  ">
+              <div className="h-fit w-[460px] md:w-[454px]  ">
                 <section id="academy">
                   <div>
                     <div className="flex items-center space-x-6">
@@ -221,7 +221,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="h-fit w-[520px] md:w-[454px] ">
+              <div className="h-fit w-[460px] md:w-[454px] ">
                 <section id="trading">
                   <div>
                     <div className="flex items-center space-x-6">
@@ -280,7 +280,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="h-fit w-[520px] md:w-[454px]">
+              <div className="h-fit w-[460px] md:w-[454px]">
                 <section id="community">
                   <div>
                     <div className="flex items-center space-x-6">

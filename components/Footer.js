@@ -7,7 +7,7 @@ import { FaDiscord } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <footer className=" flex justify-center space-y-6 flex-col w-[1000px] md:w-full h-fit bg-gray-300">
+      <footer className=" flex justify-center space-y-6 flex-col min-w-fill md:w-full h-fit bg-gray-300">
         {/* Logo and description */}
         <div className="flex flex-col items-center justify-center my-1 ">
           <p className="font-extrabold">My Coin</p>

@@ -29,91 +29,106 @@ export default function dashboard() {
       </Head>
 
       <div>
-        <div className=" relative ml-10 mr-10">
-          <input className="border-2 border-black rounded-3xl h-20 w-full pl-14 text-4xl"></input>
-          <GrSearch className="absolute top-6 left-4 text-4xl" />
+        <div className="relative block ml-10 mr-10 md:hidden">
+          <input className="w-full h-20 text-4xl border-2 border-black rounded-3xl pl-14"></input>
+          <GrSearch className="absolute text-4xl top-6 left-4" />
         </div>
-        <div className="grid grid-custom-mobile md:grid-custom  gap-y-10 gap-x-5 ml-14 pt-20 font-extrabold text-lg border-2 justify-center content-center">
-          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
-            <div className="flex flex-col justify-between items-center">
-              <div className="flex flex-col items-center">
-                <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
-                <p>Bitcoin</p>
-              </div>
-              <div className="mt-6 flex flex-col items-center">
-                <p>Price</p>
-                <p>$100,000</p>
-              </div>
+        <div className="grid grid-cols-4 mb-10 ml-10 ">
+          <div className="hidden bg-gray-600 border-2 rounded-2xl md:block">
+            {/* Searchbar Dektop */}
+            <div className="relative hidden mt-4 ml-10 mr-10 md:block">
+              <input className="w-full text-2xl border-2 border-black pl-[50px] h-14 rounded-3xl"></input>
+              <GrSearch className="absolute text-4xl top-[12px] left-3" />
+            </div>
+            {/* Price feed Desktop */}
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
           </div>
-          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
-            <div className="flex flex-col justify-between items-center">
-              <div className="flex flex-col items-center">
-                <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
-                <p>Bitcoin</p>
-              </div>
-              <div className="mt-6 flex flex-col items-center">
-                <p>Price</p>
-                <p>$100,000</p>
-              </div>
-            </div>
-          </div>
-          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
-            <div className="flex flex-col justify-between items-center">
-              <div className="flex flex-col items-center">
-                <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
-                <p>Bitcoin</p>
-              </div>
-              <div className="mt-6 flex flex-col items-center">
-                <p>Price</p>
-                <p>$100,000</p>
+          <div className="grid content-center justify-start col-span-3 text-lg font-extrabold border-2 grid-custom-mobile md:grid-custom gap-y-10 gap-x-5 ml-14">
+            <div className="px-12 pt-6 pb-6 bg-gray-300 h-fill py-14 rounded-3xl">
+              <div className="flex flex-col items-center justify-between">
+                <div className="flex flex-col items-center">
+                  <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full" />
+                  <p>Bitcoin</p>
+                </div>
+                <div className="flex flex-col items-center mt-6">
+                  <p>Price</p>
+                  <p>$100,000</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
-            <div className="flex flex-col justify-between items-center">
-              <div className="flex flex-col items-center">
-                <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
-                <p>Bitcoin</p>
-              </div>
-              <div className="mt-6 flex flex-col items-center">
-                <p>Price</p>
-                <p>$100,000</p>
-              </div>
-            </div>
-          </div>
-          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
-            <div className="flex flex-col justify-between items-center">
-              <div className="flex flex-col items-center">
-                <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
-                <p>Bitcoin</p>
-              </div>
-              <div className="mt-6 flex flex-col items-center">
-                <p>Price</p>
-                <p>$100,000</p>
+            <div className="px-12 pt-6 pb-6 bg-gray-300 h-fill py-14 rounded-3xl">
+              <div className="flex flex-col items-center justify-between">
+                <div className="flex flex-col items-center">
+                  <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full" />
+                  <p>Bitcoin</p>
+                </div>
+                <div className="flex flex-col items-center mt-6">
+                  <p>Price</p>
+                  <p>$100,000</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
-            <div className="flex flex-col justify-between items-center">
-              <div className="flex flex-col items-center">
-                <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
-                <p>Bitcoin</p>
+            <div className="px-12 pt-6 pb-6 bg-gray-300 h-fill py-14 rounded-3xl">
+              <div className="flex flex-col items-center justify-between">
+                <div className="flex flex-col items-center">
+                  <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full" />
+                  <p>Bitcoin</p>
+                </div>
+                <div className="flex flex-col items-center mt-6">
+                  <p>Price</p>
+                  <p>$100,000</p>
+                </div>
               </div>
-              <div className="mt-6 flex flex-col items-center">
-                <p>Price</p>
-                <p>$100,000</p>
+            </div>
+            <div className="px-12 pt-6 pb-6 bg-gray-300 h-fill py-14 rounded-3xl">
+              <div className="flex flex-col items-center justify-between">
+                <div className="flex flex-col items-center">
+                  <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full" />
+                  <p>Bitcoin</p>
+                </div>
+                <div className="flex flex-col items-center mt-6">
+                  <p>Price</p>
+                  <p>$100,000</p>
+                </div>
+              </div>
+            </div>
+            <div className="px-12 pt-6 pb-6 bg-gray-300 h-fill py-14 rounded-3xl">
+              <div className="flex flex-col items-center justify-between">
+                <div className="flex flex-col items-center">
+                  <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full" />
+                  <p>Bitcoin</p>
+                </div>
+                <div className="flex flex-col items-center mt-6">
+                  <p>Price</p>
+                  <p>$100,000</p>
+                </div>
+              </div>
+            </div>
+            <div className="px-12 pt-6 pb-6 bg-gray-300 h-fill py-14 rounded-3xl">
+              <div className="flex flex-col items-center justify-between">
+                <div className="flex flex-col items-center">
+                  <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full" />
+                  <p>Bitcoin</p>
+                </div>
+                <div className="flex flex-col items-center mt-6">
+                  <p>Price</p>
+                  <p>$100,000</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div className=" h-full ">
+      {/* <div className="h-full ">
       </div>
         <div className="flex flex-col mb-80">
           <div className="flex relative h-10 mb-[450px]">
             // Text and input field
-            <div className=" relative ml-52 space-y-8 mt-28">
+            <div className="relative space-y-8 ml-52 mt-28">
               <p className="text-4xl font-extrabold w-[560px]">
                 MyCoin Reaserch
               </p>

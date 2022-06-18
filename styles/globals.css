@@ -21,5 +21,16 @@
     before:transform before:origin-left before:scale-x-0 before:transition-all 
     before:duration-200 group-hover:before:scale-x-100;
   }
+  
 
+  }
+  @layer utilities {
+    .grid-custom {
+      grid-template-columns: repeat(3, minmax(0, max-content));
+    }
+  }
+  @layer utilities {
+    .grid-custom-mobile {
+      grid-template-columns: repeat(2, minmax(0, max-content));
+    }
   }

@@ -33,8 +33,8 @@ export default function dashboard() {
           <input className="border-2 border-black rounded-3xl h-20 w-full pl-14 text-4xl"></input>
           <GrSearch className="absolute top-6 left-4 text-4xl" />
         </div>
-        <div className="grid grid-cols-2 grid-rows-6 gap-y-10 gap-x-5 ml-14 pt-20 font-extrabold text-lg">
-          <div className="w-40 h-fill bg-gray-300 rounded-3xl pt-6 pb-6 ">
+        <div className="grid grid-custom-mobile md:grid-custom  gap-y-10 gap-x-5 ml-14 pt-20 font-extrabold text-lg border-2 justify-center content-center">
+          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
             <div className="flex flex-col justify-between items-center">
               <div className="flex flex-col items-center">
                 <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
@@ -46,7 +46,7 @@ export default function dashboard() {
               </div>
             </div>
           </div>
-          <div className="w-40 h-fill bg-gray-300 rounded-3xl pt-6 pb-6 ">
+          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
             <div className="flex flex-col justify-between items-center">
               <div className="flex flex-col items-center">
                 <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
@@ -58,7 +58,7 @@ export default function dashboard() {
               </div>
             </div>
           </div>
-          <div className="w-40 h-fill bg-gray-300 rounded-3xl pt-6 pb-6 ">
+          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
             <div className="flex flex-col justify-between items-center">
               <div className="flex flex-col items-center">
                 <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
@@ -70,7 +70,7 @@ export default function dashboard() {
               </div>
             </div>
           </div>
-          <div className="w-40 h-fill bg-gray-300 rounded-3xl pt-6 pb-6 ">
+          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
             <div className="flex flex-col justify-between items-center">
               <div className="flex flex-col items-center">
                 <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
@@ -82,7 +82,7 @@ export default function dashboard() {
               </div>
             </div>
           </div>
-          <div className="w-40 h-fill bg-gray-300 rounded-3xl pt-6 pb-6 ">
+          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
             <div className="flex flex-col justify-between items-center">
               <div className="flex flex-col items-center">
                 <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>
@@ -94,7 +94,7 @@ export default function dashboard() {
               </div>
             </div>
           </div>
-          <div className="w-40 h-fill bg-gray-300 rounded-3xl pt-6 pb-6 ">
+          <div className=" h-fill px-12 py-14 bg-gray-300 rounded-3xl pt-6 pb-6 ">
             <div className="flex flex-col justify-between items-center">
               <div className="flex flex-col items-center">
                 <GrBitcoin className="text-4xl text-yellow-500 bg-white rounded-full"/>

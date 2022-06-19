@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @layer base {
   body {
@@ -21,16 +20,20 @@
     before:transform before:origin-left before:scale-x-0 before:transition-all 
     before:duration-200 group-hover:before:scale-x-100;
   }
-  
+}
+@layer utilities {
+  .grid-custom-3 {
+    grid-template-columns: repeat(3, minmax(0, max-content));
+  }
+}
+@layer utilities {
+  .grid-custom-2 {
+    grid-template-columns: repeat(2, minmax(0, max-content));
+  }
 
-  }
   @layer utilities {
-    .grid-custom {
-      grid-template-columns: repeat(3, minmax(0, max-content));
+    .grid-custom-1 {
+      grid-template-columns: repeat(1, minmax(0, max-content));
     }
   }
-  @layer utilities {
-    .grid-custom-mobile {
-      grid-template-columns: repeat(2, minmax(0, max-content));
-    }
-  }
+}

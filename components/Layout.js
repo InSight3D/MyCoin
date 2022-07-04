@@ -16,7 +16,7 @@ export default function Layout({ children }) {
   } else {
     return (
       <div className="flex flex-col min-h-screen justify-between">
-        <Navigation />
+        <PlatformNavigation />
         {children}
         <Footer />
       </div>
